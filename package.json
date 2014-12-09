@@ -27,7 +27,6 @@
     "jade-brunch": "^1.8.1",
     "javascript-brunch": ">= 1.0 < 1.8",
     "karma": "^0.12.28",
-    "static-jade-brunch": "^1.7.0",
     "stylus-brunch": ">= 1.0 < 1.8",
     "uglify-js-brunch": ">= 1.0 < 1.8"
   },
