@@ -17,10 +17,17 @@ exports.config =
             joinTo: 'js/app.js'
 
     plugins:
+        jadePages:
+            pattern: /^app\/pages\/.*\.jade$/
+            destination: (path) ->
+                path.replace /^app[\/\\](.*)\.jade$/, "$1.html"
+            jade:
+                doctype: "html"
+            htmlmin: false
+
         stylus:
-            plugins: ['jeet']
-        jade:
-            pretty: yes
+            plugins: ['jeet','rupture']
+
         autoReload:
             enabled:
                 js: on
@@ -40,10 +47,6 @@ exports.config =
                     level: "warn"
 
                 max_line_length:
-                    level: "ignore"
-        static_jade:                        
-            extension:  ".static.jade"        
-            path:       [ /app(\/|\\)docs/ ]  
-            asset:      "app/jade_asset"      
+                    level: "ignore"  
     conventions:
         assets: /(assets|vendor\/assets|font)/
