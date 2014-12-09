@@ -1,19 +1,53 @@
 @import '_base'
+
+yellow=#F4BB3B
+
 section#center
-	background grey
-	h1, p
-		// color white
-	h1
-	    font-weight bold
-	    font-size 115px
-	    line-height 115px
-	    margin 0 0 12px 0
-	p
-	    font-weight regular
-	    font-size 26px
-	    line-height 31px
-	    margin 0
-	div.main-text
-		column(6/12)
-		shift(2/12)
-		background yellow
+    background grey
+    h1, p, a
+        color white
+        letter-spacing 0.8px
+    h1
+        font-weight bold
+        font-size 115px
+        line-height 115px
+        margin 0 0 12px 0
+    p
+        font-weight regular
+        font-size 26px
+        line-height 31px
+        margin 0
+    a
+        text-decoration none
+    ul#anchor-menu
+        column(8/12)
+        shift(2/12)
+        list-style-type none
+        padding 0
+        margin-top 40px
+        margin-bottom 0
+        li
+            column(2/8)
+            font-size 16px
+            line-height 20px
+            text-align center
+            a:hover
+                color yellow
+    div.main-text
+        column(6/12)
+        shift(2/12)
+        margin-top 150px
+        margin-bottom 80px
+        background #333333
+    a.button
+        shift(2/12)
+        position relative
+        clear both
+        display inline-block
+        margin 0
+        padding 15px 50px
+        border 2px solid yellow
+    a.button:hover
+        background-color yellow
+        
+        
