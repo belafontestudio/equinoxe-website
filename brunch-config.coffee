@@ -17,6 +17,8 @@ exports.config =
             joinTo: 'js/app.js'
 
     plugins:
+        stylus:
+            plugins: ['jeet']
         jade:
             pretty: yes
         autoReload:
