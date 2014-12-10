@@ -1,7 +1,7 @@
 @import '_base'
 
 yellow=#F4BB3B
-scale = 0 400px 600px 800px 1050px
+scale = 0 450px 600px 768px 1080px 1300px
 
 section#center
     background grey
@@ -13,28 +13,61 @@ section#center
         font-weight bold
         font-size 40px
         line-height 40px
-        margin 0 0 12px 0
+        margin 0 0 23px 0
     p
         font-weight regular
         font-size 16px
-        line-height 20px
+        line-height 23px
         margin 0
+        margin-bottom 10px
     a
         text-decoration none
         font-size 16px
         line-height 20px
+    p.call-to-action
+        column(12/12)
+        text-transform uppercase
+        font-style italic
     ul#anchor-menu
-        column(8/12)
-        shift(2/12)
+        column(12/12)
         list-style-type none
         padding 0
         margin-top 40px
         margin-bottom 0
         li
-            column(2/8)
-            text-align center
-            a:hover
+            column(3/12)
+            text-align center !important
+            a:hover, a:active
                 color yellow
+            a:visited
+                opacity 0.5
+    ul#call-to-action-menu
+        column(12/12)
+        list-style-type none
+        padding 0
+        li
+            column(4/12)
+            text-align center !important
+            img
+                margin-bottom 15px
+            img.motor
+                width 50%
+            img.sail
+                width 32%
+            img.gulet
+                width 39%
+        a
+            text-transform uppercase
+            text-decoration underline
+            font-size 16px
+            line-height 23px
+            display block
+        a:hover, a:active
+            color yellow
+        a:visited
+            opacity 0.5
+        
+        
     div.main-text
         column(12/12)
         margin-top 150px
@@ -49,8 +82,16 @@ section#center
         border 2px solid yellow
     a.button:hover
         background-color yellow
-+tablet()
++above(450px)
     section#center
+        padding 0 80px !important
++above(600px)
+    section#center
+        max-width 700px !important
++above(768px)
+    section#center
+        max-width 1400px !important
+        padding 0 !important
         h1
             font-size 65px
             line-height 65px
@@ -59,29 +100,44 @@ section#center
             shift(2/12)
             li
                 column(2/8)
+        ul#call-to-action-menu
+            column(6/12)
+            shift(2/12)
+            li
+                column(2/6)
         div.main-text
             column(6/12)
             shift(2/12)
         a.button
             shift(2/12)
-+desktop()
+        p.call-to-action
+            column(6/12)
+            shift(2/12)
++above(1080px)
+    section#center
+        h1
+            font-size 85px
+            line-height 85px
+        p
+            font-size 20px
+            line-height 28px
+        ul#call-to-action-menu
+            a
+                font-size 20px
+                line-height 28px
++above(1300px)
     section#center
         h1
             font-size 115px
             line-height 115px
         p
             font-size 26px
-            line-height 31px
-        ul#anchor-menu
-            column(8/12)
-            shift(2/12)
-            li
-                column(2/8)
-        div.main-text
-            column(6/12)
-            shift(2/12)
-        a.button
-            shift(2/12)
+            line-height 33px
+        ul#call-to-action-menu
+            a
+                font-size 26px
+                line-height 33px
+
 
             
             
