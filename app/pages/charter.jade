@@ -1,0 +1,17 @@
+extends ./layouts/_general.jade
+block body
+  section#center
+    include partials/_menu.jade
+    .main-text
+      h1.smaller For Every Yacht Experience:
+    .clear
+    ul#yacht-size
+      li
+        //- img.motor(src='../images/sprite/icon_motor.svg', alt='Motor')
+        a.button(href="#") Yacht
+      li
+        //- img.sail(src='../images/sprite/icon_sail.svg', alt='Sail')
+        a.button(href="#") Super Yacht
+      li
+        //- img.gulet(src='../images/sprite/icon_gulet.svg', alt='Gulet')
+        a.button(href="#") Mega Yacht
