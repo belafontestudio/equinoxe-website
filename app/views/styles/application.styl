@@ -4,8 +4,14 @@ yellow=#F4BB3B
 scale = 0 450px 600px 768px 1080px 1300px
 
 section#center
-    background grey
+    // background grey
     padding 0 20px !important
+    div.logo
+            margin-top 100px
+            column(8/12)
+            shift(2/12)
+            img
+                width 100%
     h1, p, a
         color white
         letter-spacing 0.8px
@@ -72,7 +78,13 @@ section#center
         column(12/12)
         margin-top 150px
         margin-bottom 80px
-        background #333333
+        // background #333333
+    div.main-text.home
+        margin-top 40px
+        text-align center
+        p
+            font-size 19px
+            line-height 26px
     a.button
         position relative
         clear both
@@ -82,16 +94,45 @@ section#center
         border 2px solid yellow
     a.button:hover
         background-color yellow
+    a.button.home
+        position relative
+        left 50%
+        margin-left -80px
+    div.quote
+        column(12/12)
+        margin-top 150px
+        p
+            font-size 26px
+            line-height 36px
+        p.author
+            font-size 18px
+            line-height 21px
+            margin-top 25px
 +above(450px)
     section#center
         padding 0 80px !important
+        div.logo
+            margin-top 120px
 +above(600px)
     section#center
         max-width 700px !important
+        div.main-text.home
+            margin-top 50px
+        div.logo
+            margin-top 135px
+            column(6/12)
+            shift(3/12)
 +above(768px)
     section#center
         max-width 1400px !important
         padding 0 !important
+        div.main-text.home
+            margin-top 60px
+            shift(3/12)
+        div.logo
+            margin-top 150px
+            column(4/12)
+            shift(4/12)
         h1
             font-size 65px
             line-height 65px
@@ -113,6 +154,15 @@ section#center
         p.call-to-action
             column(6/12)
             shift(2/12)
+        div.quote
+            column(8/12)
+            shift(2/12)
+            p
+                font-size 37px
+                line-height 45px
+            p.author
+                font-size 20px
+                line-height 23px
 +above(1080px)
     section#center
         h1
@@ -125,18 +175,47 @@ section#center
             a
                 font-size 20px
                 line-height 28px
+        div.main-text.home
+            margin-top 70px
+            p
+                font-size 23px
+                line-height 31px
+        div.quote
+            p
+                font-size 50px
+                line-height 58px
+            p.author
+                font-size 23px
+                line-height 26px
 +above(1300px)
     section#center
+        div.logo
+            margin-top 170px
+            column(4/12)
+            shift(4/12)
         h1
             font-size 115px
             line-height 115px
         p
             font-size 26px
             line-height 33px
+        div.main-text.home
+            margin-top 80px
+            p
+                font-size 29px
+                line-height 37px
         ul#call-to-action-menu
             a
                 font-size 26px
                 line-height 33px
+        div.quote
+            p
+                font-size 68px
+                line-height 73px
+            p.author
+                font-size 30px
+                line-height 33px
+            
 
 
             
