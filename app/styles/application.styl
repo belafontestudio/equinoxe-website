@@ -2,6 +2,7 @@
 
 
 section#center
+    z-index 2
     // background grey
     padding 0 20px !important
     div.logo
@@ -10,7 +11,7 @@ section#center
             shift(2/12)
             img
                 width 100%
-    h1, h2, p, a
+    h1, h2, h3, h4, p, a, ul, li
         color white
         letter-spacing 0.8px
     h1
@@ -25,6 +26,8 @@ section#center
         font-size 18px
         line-height 18px
         text-transform uppercase
+    h2.main-title
+        text-transform none !important
     p
         font-weight regular
         font-size rem(16px)
@@ -35,6 +38,10 @@ section#center
         text-decoration none
         font-size rem(16px)
         line-height 20px
+    ul.vertical-list
+        width 100% !important
+        li
+            width 100% !important
     p.call-to-action
         column(12/12)
         text-transform uppercase
@@ -80,7 +87,7 @@ section#center
             color yellow
         a:visited
             opacity 0.5
-    ul#yacht-size
+    ul#yacht-size, ul#latest-yachts
         column(12/12)
         list-style-type none
         padding 0
@@ -128,7 +135,7 @@ section#center
                     text-align center
                     text-transform uppercase
                     left 0
-        
+    
         
     div.main-text
         column(12/12)
@@ -164,6 +171,23 @@ section#center
             font-size 18px
             line-height 21px
             margin-top 25px
+ul#latest-yachts-imgbackground
+    z-index 1
+    li
+        position absolute
+        width 100%
+        height 33%
+        left 0
+    li#artemide
+        background-color #999999
+        top 0
+    li#diana
+        background-color #666666
+        top 33%
+    li#polar-star
+        background-color #333333
+        bottom 0
+        height 34%
 +above(450px)
     section#center
         padding 0 80px !important
@@ -225,7 +249,7 @@ section#center
             p.author
                 font-size rem(20px)
                 line-height 23px
-        ul#yacht-size
+        ul#yacht-size, ul#latest-yachts
             column(9/12)
             shift(2/12)
             text-align left !important
@@ -254,6 +278,11 @@ section#center
                     text-align center
                     text-transform uppercase
                     left 0
+        ul#latest-yachts
+            column(9/12)
+            shift(2/12)
+            li
+                column(6/9)
         
 +above(1080px)
     section#center
@@ -282,6 +311,28 @@ section#center
             p.author
                 font-size rem(23px)
                 line-height 26px
+        ul#latest-yachts
+            column(9/12)
+            shift(2/12)
+            li
+                column(3/9)
+    ul#latest-yachts-imgbackground
+        li
+            position absolute
+            height 300% !important
+            top 0 !important
+        li#artemide
+            background-color #999999
+            left 0
+            width 35.5%
+        li#diana
+            background-color #666666
+            left 35.5%
+            width 30.5%
+        li#polar-star
+            background-color #333333
+            left 66%
+            width 34%
 +above(1300px)
     section#center
         div.logo
