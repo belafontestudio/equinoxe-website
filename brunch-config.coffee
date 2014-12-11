@@ -26,7 +26,7 @@ exports.config =
             htmlmin: false
 
         stylus:
-            plugins: ['jeet','rupture']
+            plugins: ['jeet','rupture','stylus-type-utils']
 
         autoReload:
             enabled:

@@ -10,13 +10,14 @@ block body
     p.call-to-action
         | Choose your lifestyle:
     .clear
-    ul#call-to-action-menu
-      li
-        img.motor(src='../images/sprite/icon_motor.svg', alt='Motor')
-        a(href="#") Motor
-      li
-        img.sail(src='../images/sprite/icon_sail.svg', alt='Sail')
-        a(href="#") Sail
-      li
-        img.gulet(src='../images/sprite/icon_gulet.svg', alt='Gulet')
-        a(href="#") Gulet
+    block call-to-action
+      ul#call-to-action-menu
+        li
+          img.motor(src='../images/sprite/icon_motor.svg', alt='Motor')
+          a(href="#") Motor
+        li
+          img.sail(src='../images/sprite/icon_sail.svg', alt='Sail')
+          a(href="#") Sail
+        li
+          img.gulet(src='../images/sprite/icon_gulet.svg', alt='Gulet')
+          a(href="#") Gulet
