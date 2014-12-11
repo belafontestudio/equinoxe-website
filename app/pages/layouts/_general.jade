@@ -19,4 +19,5 @@ html.no-js(lang="en")
       link(href="../css/app.css", rel="stylesheet")
   body
     block body
-      
+    block scripts
+      script(src="../js/app.js", onload="require('initialize');")   

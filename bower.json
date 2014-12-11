@@ -9,21 +9,13 @@
   ],
   "dependencies": {
     "swag": "~0.5.0",
-    "lodash": "~2",
     "jquery": "~2",
-    "backbone": "~1",
     "normalize-css": "~2",
     "h5bp-helpers": "~0.1",
-    "font-awesome": "~4"
+    "font-awesome": "~4",
+    "fullpage.js": "~2.5.1"
   },
   "overrides": {
-    "backbone": {
-      "main": "backbone.js",
-      "dependencies": {
-        "lodash": "*",
-        "jquery": "*"
-      }
-    },
     "font-awesome": {
       "main": [
         "fonts",

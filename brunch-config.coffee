@@ -38,15 +38,5 @@ exports.config =
             path: 'images'
             smushit: no
 
-        coffeelint:
-            pattern: /^app\/.*\.coffee$/
-
-            options:
-                indentation:
-                    value: 4
-                    level: "warn"
-
-                max_line_length:
-                    level: "ignore"  
     conventions:
         assets: /(assets|vendor\/assets|font)/
