@@ -11,7 +11,8 @@ exports.config =
 
         stylesheets:
             joinTo:
-                'css/app.css': /^(vendor|bower_components|app)/
+                'css/app.css': /^(app|vendor)/
+                'css/vendor.css': /^(vendor|bower_components)/
 
         templates:
             joinTo: 'js/app.js'
