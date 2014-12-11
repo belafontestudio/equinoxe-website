@@ -1,0 +1,30 @@
+extends ./layouts/_general.jade
+block body
+  section#center
+    include partials/_menu.jade
+    .main-text
+      h1.smaller2 Latest Yachts:</br>—
+    .clear
+    ul#yacht-size
+      li
+        h2 Yacht
+        ul
+          li
+            | CHARTER: from € 400,00
+          li
+            | LENGTH: 38.00 m
+          li
+            | BUILT: 2006
+          li
+            | GUESTS: 10 
+        a.button(href="#") Discover
+      li
+        h2 Super Yacht
+        p
+          | 24.00 m to 40.00 m
+        a.button(href="#") Discover
+      li
+        h2 Mega Yacht
+        p
+          | Over 40.00 m
+        a.button(href="#") Discover
