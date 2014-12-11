@@ -17,31 +17,39 @@ section#center
     h1
         font-weight bold
         font-size rem(40px)
-        line-height 40px
+        line-height rem(40px)
         margin 0 0 23px 0
     h1.smaller
         font-size rem(25px)
-        line-height 25px
+        line-height rem(25px)
     h1.smaller2
-        font-size 18px
-        line-height 18px
+        font-size rem(18px)
+        line-height rem(18px)
         text-transform uppercase
+        margin-bottom 50px
+        text-align center
     h2.main-title
         text-transform none !important
+        font-size rem(30px) !important
+        line-height rem(31px) !important
+        margin-bottom 20px !important
     p
         font-weight regular
         font-size rem(16px)
-        line-height 23px
+        line-height rem(23px)
         margin 0
         margin-bottom 10px
     a
         text-decoration none
         font-size rem(16px)
-        line-height 20px
+        line-height rem(20px)
     ul.vertical-list
         width 100% !important
+        margin-bottom 20px !important
         li
             width 100% !important
+            font-size rem(16px)
+            line-height rem(20px)
     p.call-to-action
         column(12/12)
         text-transform uppercase
@@ -81,7 +89,7 @@ section#center
             text-transform uppercase
             text-decoration underline
             font-size rem(16px)
-            line-height 23px
+            line-height rem(23px)
             display block
         a:hover, a:active
             color yellow
@@ -120,13 +128,13 @@ section#center
                     left 0
             h2
                 margin 25px 0 5px 0
-                font-size 25px
-                line-height 25px
+                font-size rem(25px)
+                line-height rem(25px)
                 text-transform uppercase
             p
                 margin 0 0 20px 0
-                font-size 16px
-                line-height 20px
+                font-size rem(16px)
+                line-height rem(20px)
             a.button
                     width 70%
                     margin 0
@@ -147,7 +155,7 @@ section#center
         text-align center
         p
             font-size rem(19px)
-            line-height 26px
+            line-height rem(26px)
     a.button
         position relative
         clear both
@@ -165,29 +173,22 @@ section#center
         column(12/12)
         margin-top 100px
         p
-            font-size 26px
-            line-height 36px
+            font-size rem(26px)
+            line-height rem(36px)
         p.author
-            font-size 18px
-            line-height 21px
+            font-size rem(18px)
+            line-height rem(21px)
             margin-top 25px
 ul#latest-yachts-imgbackground
     z-index 1
     li
         position absolute
-        width 100%
-        height 33%
-        left 0
     li#artemide
         background-color #999999
-        top 0
     li#diana
         background-color #666666
-        top 33%
     li#polar-star
         background-color #333333
-        bottom 0
-        height 34%
 +above(450px)
     section#center
         padding 0 80px !important
@@ -215,13 +216,12 @@ ul#latest-yachts-imgbackground
             shift(4/12)
         h1
             font-size rem(65px)
-            line-height 65px
+            line-height rem(65px)
         h1.smaller
             font-size rem(32px)
-            line-height 32px
+            line-height rem(32px)
         h1.smaller2
-            font-size 22px
-            line-height 22px
+            text-align left
         ul#anchor-menu
             column(8/12)
             shift(2/12)
@@ -235,6 +235,10 @@ ul#latest-yachts-imgbackground
         div.main-text
             column(6/12)
             shift(2/12)
+        div.main-text.left
+            column(4/12)
+            shift(0/12)
+            margin-left 40px
         a.button
             shift(2/12)
         p.call-to-action
@@ -245,10 +249,10 @@ ul#latest-yachts-imgbackground
             shift(2/12)
             p
                 font-size rem(37px)
-                line-height 45px
+                line-height rem(45px)
             p.author
                 font-size rem(20px)
-                line-height 23px
+                line-height rem(23px)
         ul#yacht-size, ul#latest-yachts
             column(9/12)
             shift(2/12)
@@ -279,43 +283,11 @@ ul#latest-yachts-imgbackground
                     text-transform uppercase
                     left 0
         ul#latest-yachts
-            column(9/12)
-            shift(2/12)
+            column(12/12)
+            shift(0/12)
+            margin-left 40px
             li
-                column(6/9)
-        
-+above(1080px)
-    section#center
-        h1
-            font-size rem(85px)
-            line-height 85px
-        h1.smaller
-            font-size rem(43px)
-            line-height 43px
-        p
-            font-size rem(20px)
-            line-height 28px
-        ul#call-to-action-menu
-            a
-                font-size rem(20px)
-                line-height 28px
-        div.main-text.home
-            margin-top 70px
-            p
-                font-size rem(23px)
-                line-height 31px
-        div.quote
-            p
-                font-size rem(50px)
-                line-height 58px
-            p.author
-                font-size rem(23px)
-                line-height 26px
-        ul#latest-yachts
-            column(9/12)
-            shift(2/12)
-            li
-                column(3/9)
+                column(4/12)
     ul#latest-yachts-imgbackground
         li
             position absolute
@@ -324,15 +296,56 @@ ul#latest-yachts-imgbackground
         li#artemide
             background-color #999999
             left 0
-            width 35.5%
+            width 33%
         li#diana
             background-color #666666
-            left 35.5%
-            width 30.5%
+            left 33%
+            width 33%
         li#polar-star
             background-color #333333
             left 66%
             width 34%
+        
++above(1080px)
+    section#center
+        h1
+            font-size rem(85px)
+            line-height rem(85px)
+        h1.smaller
+            font-size rem(43px)
+            line-height rem(43px)
+        p
+            font-size rem(20px)
+            line-height rem(28px)
+        h2.main-title
+            font-size rem(40px) !important
+            line-height rem(42px) !important
+        h1.smaller2
+            font-size rem(22px)
+            line-height rem(22px)
+        ul#call-to-action-menu
+            a
+                font-size rem(20px)
+                line-height rem(28px)
+        div.main-text.home
+            margin-top 70px
+            p
+                font-size rem(23px)
+                line-height rem(31px)
+        div.quote
+            p
+                font-size rem(50px)
+                line-height rem(58px)
+            p.author
+                font-size rem(23px)
+                line-height rem(26px)
+        ul#latest-yachts
+            column(12/12)
+            shift(0/12)
+            margin-left 40px
+            li
+                column(4/12)
+
 +above(1300px)
     section#center
         div.logo
@@ -341,26 +354,26 @@ ul#latest-yachts-imgbackground
             shift(4/12)
         h1
             font-size rem(115px)
-            line-height 115px
+            line-height rem(115px)
         h1.smaller
             font-size rem(63px)
-            line-height 63px
+            line-height rem(63px)
         p
             font-size rem(26px)
-            line-height 33px
+            line-height rem(33px)
         div.main-text.home
             margin-top 80px
             p
                 font-size rem(29px)
-                line-height 37px
+                line-height rem(37px)
         ul#call-to-action-menu
             a
                 font-size rem(26px)
-                line-height 33px
+                line-height rem(33px)
         div.quote
             p
                 font-size rem(68px)
-                line-height 73px
+                line-height rem(73px)
             p.author
                 font-size rem(30px)
-                line-height 33px
+                line-height rem(33px)
