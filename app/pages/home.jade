@@ -1,29 +1,13 @@
-doctype html
-// if lt IE 7html.no-js.lt-ie9.lt-ie8.lt-ie7(lang="en")
-// if IE 7html.no-js.lt-ie9.lt-ie8(lang="en")
-// if IE 8html.no-js.lt-ie9(lang="en")
-//if gt IE 8
-  | [if gt IE 8]
-html.no-js(lang="en")
-  // <![endif]
-  head
-    meta(charset="utf-8")
-    meta(content="IE=edge,chrome=1", http-equiv="X-UA-Compatible")
-    title
-    meta(content="", name="description")
-    meta(content="width=device-width", name="viewport")
-    script
-      <window class="brunch">= window.brunch || {};<\\/window>
-    link(href="../css/font-awesome.css", rel="stylesheet")
-    link(href="../css/app.css", rel="stylesheet")
-  body
-    section#center
-      include partials/_menu.jade
-      .logo
-        img(src='../images/sprite/logo.svg', alt='Equinoxe-Logo')
-      .clear
-      .main-text.home
-        p
-          | Da oltre 35 anni dedichiamo le nostre energie alla selezione delle imbarcazioni migliori.
-      .clear
-      a.button.home(href="#") View All
+extends ./layouts/_general.jade
+
+block body
+  section#center
+    include partials/_menu.jade
+    .logo
+      img(src='../images/sprite/logo.svg', alt='Equinoxe-Logo')
+    .clear
+    .main-text.home
+      p
+        | Da oltre 35 anni dedichiamo le nostre energie alla selezione delle imbarcazioni migliori.
+    .clear
+    a.button.home(href="#") View All
