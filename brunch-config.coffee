@@ -5,6 +5,7 @@ exports.config =
                 'js/app.js': /^(vendor|bower_components|app)/
 
             order:
+                before: ['bower_components/jquery/dist/jquery.js']
                 after: ['bower_components/swag/lib/swag.js']
 
             pluginHelpers: 'js/app.js'

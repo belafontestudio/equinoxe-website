@@ -1,5 +1,17 @@
 @import '_base'
-
+ul#anchor-menu
+    column(12/12)
+    list-style-type none
+    padding 0
+    margin-top 40px
+    margin-bottom 0
+    li
+        column(3/12)
+        text-align center !important
+        a:hover, a:active
+            color yellow
+        a:visited
+            opacity 0.5
 
 section#center
     z-index 2
@@ -55,19 +67,7 @@ section#center
         text-transform uppercase
         font-style italic
         margin-bottom 30px
-    ul#anchor-menu
-        column(12/12)
-        list-style-type none
-        padding 0
-        margin-top 40px
-        margin-bottom 0
-        li
-            column(3/12)
-            text-align center !important
-            a:hover, a:active
-                color yellow
-            a:visited
-                opacity 0.5
+    
     ul#call-to-action-menu
         column(12/12)
         list-style-type none
