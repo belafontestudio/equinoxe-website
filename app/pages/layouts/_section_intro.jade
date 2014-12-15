@@ -1,6 +1,5 @@
 block section
   section#center
-    
     .main-text
       h1 
         block title
@@ -8,17 +7,31 @@ block section
       p
         block description
           | the description
-    p.call-to-action
-        | Choose your lifestyle:
+    block explain-call
+      p.call-to-action
+        block explain-call-text
+          | Call to action text
     .clear
     block call-to-action
       ul#call-to-action-menu
         li
-          img.motor(src='../images/sprite/icon_motor.svg', alt='Motor')
-          a(href="#") Motor
+          block first-call-to-action
+            block first-icon
+              img
+            a(href="#") 
+              block first-button
+                | text button
         li
-          img.sail(src='../images/sprite/icon_sail.svg', alt='Sail')
-          a(href="#") Sail
+          block second-call-to-action
+            block second-icon
+              img
+            a(href="#")
+              block second-button
+                | text button
         li
-          img.gulet(src='../images/sprite/icon_gulet.svg', alt='Gulet')
-          a(href="#") Gulet
+          block third-call-to-action
+            block third-icon
+             img
+            a(href="#")
+              block third-button
+                | text button

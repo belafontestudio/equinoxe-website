@@ -68,6 +68,17 @@ section#center
                 color yellow
             a:visited
                 opacity 0.5
+    ul#call-to-action-menu-button
+        column(12/12)
+        list-style-type none
+        padding 0
+        li 
+            column(12/12)
+            text-align center !important
+            margin-bottom 12px
+            a
+                width 100%
+                left 0
     ul#call-to-action-menu
         column(12/12)
         list-style-type none
@@ -85,16 +96,16 @@ section#center
                 width 39%
                 position relative
                 left 5%
-        a
+        a.link
             text-transform uppercase
             text-decoration underline
             font-size rem(16px)
             line-height rem(23px)
             display block
-        a:hover, a:active
-            color yellow
-        a:visited
-            opacity 0.5
+            &.link:hover, &:active
+                color yellow
+            &:visited
+                opacity 0.5
     ul#yacht-size, ul#latest-yachts
         column(12/12)
         list-style-type none
@@ -203,6 +214,11 @@ ul#latest-yachts-imgbackground
             margin-top 135px
             column(6/12)
             shift(3/12)
+        ul#call-to-action-menu-button
+            column(12/12)
+            li 
+                column(6/12)
+                margin-bottom 0
 +above(768px)
     section#center
         max-width 1400px !important
@@ -227,6 +243,12 @@ ul#latest-yachts-imgbackground
             shift(2/12)
             li
                 column(2/8)
+        ul#call-to-action-menu-button
+            column(6/12)
+            shift (2/12)
+            li 
+                column(3/6)
+                margin-bottom 0
         ul#call-to-action-menu
             column(6/12)
             shift(2/12)
