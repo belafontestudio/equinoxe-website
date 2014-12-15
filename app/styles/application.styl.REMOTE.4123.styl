@@ -1,0 +1,379 @@
+@import '_base'
+ul#anchor-menu
+    column(12/12)
+    list-style-type none
+    padding 0
+    margin-top 40px
+    margin-bottom 0
+    li
+        column(3/12)
+        text-align center !important
+        a:hover, a:active
+            color yellow
+        a:visited
+            opacity 0.5
+
+section#center
+    z-index 2
+    // background grey
+    padding 0 20px !important
+    div.logo
+            margin-top 100px
+            column(8/12)
+            shift(2/12)
+            img
+                width 100%
+    h1, h2, h3, h4, p, a, ul, li
+        color white
+        letter-spacing 0.8px
+    h1
+        font-weight bold
+        font-size rem(40px)
+        line-height rem(40px)
+        margin 0 0 23px 0
+    h1.smaller
+        font-size rem(25px)
+        line-height rem(25px)
+    h1.smaller2
+        font-size rem(18px)
+        line-height rem(18px)
+        text-transform uppercase
+        margin-bottom 50px
+        text-align center
+    h2.main-title
+        text-transform none !important
+        font-size rem(30px) !important
+        line-height rem(31px) !important
+        margin-bottom 20px !important
+    p
+        font-weight regular
+        font-size rem(16px)
+        line-height rem(23px)
+        margin 0
+        margin-bottom 10px
+    a
+        text-decoration none
+        font-size rem(16px)
+        line-height rem(20px)
+    ul.vertical-list
+        width 100% !important
+        margin-bottom 20px !important
+        li
+            width 100% !important
+            font-size rem(16px)
+            line-height rem(20px)
+    p.call-to-action
+        column(12/12)
+        text-transform uppercase
+        font-style italic
+        margin-bottom 30px
+    
+    ul#call-to-action-menu
+        column(12/12)
+        list-style-type none
+        padding 0
+        li
+            column(4/12)
+            text-align center !important
+            img
+                margin-bottom 15px
+            img.motor
+                width 50%
+            img.sail
+                width 32%
+            img.gulet
+                width 39%
+                position relative
+                left 5%
+        a
+            text-transform uppercase
+            text-decoration underline
+            font-size rem(16px)
+            line-height rem(23px)
+            display block
+        a:hover, a:active
+            color yellow
+        a:visited
+            opacity 0.5
+    ul#yacht-size, ul#latest-yachts
+        column(12/12)
+        list-style-type none
+        padding 0
+        margin-top -80px
+        text-align center !important
+        li
+            position relative
+            text-align center !important
+            div.container-img
+                width 100%
+                height auto
+                position relative
+                img.yacht
+                    width 60%
+                    position absolute
+                    bottom 0
+                    left 22%
+                img.super-yacht
+                    width 80%
+                    position absolute
+                    bottom 0
+                    left 12%
+                img.mega-yacht
+                    width 100%
+                    position relative
+                    left -2%
+                    bottom -6px
+                img.mega-yacht.img-spacer
+                    opacity 0
+                    left 0
+            h2
+                margin 25px 0 5px 0
+                font-size rem(25px)
+                line-height rem(25px)
+                text-transform uppercase
+            p
+                margin 0 0 20px 0
+                font-size rem(16px)
+                line-height rem(20px)
+            a.button
+                    width 70%
+                    margin 0
+                    padding-left 0
+                    padding-right 0
+                    text-align center
+                    text-transform uppercase
+                    left 0
+    
+        
+    div.main-text
+        column(12/12)
+        margin-top 100px
+        margin-bottom 80px
+        // background #333333
+    div.main-text.home
+        margin-top 40px
+        text-align center
+        p
+            font-size rem(19px)
+            line-height rem(26px)
+    a.button
+        position relative
+        clear both
+        display inline-block
+        margin 0
+        padding 15px 50px
+        border 2px solid yellow
+    a.button:hover
+        background-color yellow
+    a.button.home
+        position relative
+        left 50%
+        margin-left -80px
+    div.quote
+        column(12/12)
+        margin-top 100px
+        p
+            font-size rem(26px)
+            line-height rem(36px)
+        p.author
+            font-size rem(18px)
+            line-height rem(21px)
+            margin-top 25px
+ul#latest-yachts-imgbackground
+    z-index 1
+    li
+        position absolute
+    li#artemide
+        background-color #999999
+    li#diana
+        background-color #666666
+    li#polar-star
+        background-color #333333
++above(450px)
+    section#center
+        padding 0 80px !important
+        div.logo
+            margin-top 100px
++above(600px)
+    section#center
+        max-width 700px !important
+        div.main-text.home
+            margin-top 50px
+        div.logo
+            margin-top 135px
+            column(6/12)
+            shift(3/12)
++above(768px)
+    section#center
+        max-width 1400px !important
+        padding 0 !important
+        div.main-text.home
+            margin-top 60px
+            shift(3/12)
+        div.logo
+            margin-top 150px
+            column(4/12)
+            shift(4/12)
+        h1
+            font-size rem(65px)
+            line-height rem(65px)
+        h1.smaller
+            font-size rem(32px)
+            line-height rem(32px)
+        h1.smaller2
+            text-align left
+        ul#anchor-menu
+            column(8/12)
+            shift(2/12)
+            li
+                column(2/8)
+        ul#call-to-action-menu
+            column(6/12)
+            shift(2/12)
+            li
+                column(2/6)
+        div.main-text
+            column(6/12)
+            shift(2/12)
+        div.main-text.left
+            column(4/12)
+            shift(0/12)
+            margin-left 40px
+        a.button
+            shift(2/12)
+        p.call-to-action
+            column(6/12)
+            shift(2/12)
+        div.quote
+            column(8/12)
+            shift(2/12)
+            p
+                font-size rem(37px)
+                line-height rem(45px)
+            p.author
+                font-size rem(20px)
+                line-height rem(23px)
+        ul#yacht-size, ul#latest-yachts
+            column(9/12)
+            shift(2/12)
+            text-align left !important
+            margin-top -110px
+            li
+                column(3/9)
+                text-align left !important
+                div.container-img
+                    img.yacht
+                        bottom 0
+                        left -2%
+                    img.super-yacht
+                        bottom 0
+                        left -6%
+                    img.mega-yacht
+                        left -10%
+                        bottom -6px
+            h2
+                margin 25px 0 0 0
+                text-transform uppercase
+            a.button
+                    width 70%
+                    margin 0
+                    padding-left 0
+                    padding-right 0
+                    text-align center
+                    text-transform uppercase
+                    left 0
+        ul#latest-yachts
+            column(12/12)
+            shift(0/12)
+            margin-left 40px
+            li
+                column(4/12)
+    ul#latest-yachts-imgbackground
+        li
+            position absolute
+            height 300% !important
+            top 0 !important
+        li#artemide
+            background-color #999999
+            left 0
+            width 33%
+        li#diana
+            background-color #666666
+            left 33%
+            width 33%
+        li#polar-star
+            background-color #333333
+            left 66%
+            width 34%
+        
++above(1080px)
+    section#center
+        h1
+            font-size rem(85px)
+            line-height rem(85px)
+        h1.smaller
+            font-size rem(43px)
+            line-height rem(43px)
+        p
+            font-size rem(20px)
+            line-height rem(28px)
+        h2.main-title
+            font-size rem(40px) !important
+            line-height rem(42px) !important
+        h1.smaller2
+            font-size rem(22px)
+            line-height rem(22px)
+        ul#call-to-action-menu
+            a
+                font-size rem(20px)
+                line-height rem(28px)
+        div.main-text.home
+            margin-top 70px
+            p
+                font-size rem(23px)
+                line-height rem(31px)
+        div.quote
+            p
+                font-size rem(50px)
+                line-height rem(58px)
+            p.author
+                font-size rem(23px)
+                line-height rem(26px)
+        ul#latest-yachts
+            column(12/12)
+            shift(0/12)
+            margin-left 40px
+            li
+                column(4/12)
+
++above(1300px)
+    section#center
+        div.logo
+            margin-top 170px
+            column(4/12)
+            shift(4/12)
+        h1
+            font-size rem(115px)
+            line-height rem(115px)
+        h1.smaller
+            font-size rem(63px)
+            line-height rem(63px)
+        p
+            font-size rem(26px)
+            line-height rem(33px)
+        div.main-text.home
+            margin-top 80px
+            p
+                font-size rem(29px)
+                line-height rem(37px)
+        ul#call-to-action-menu
+            a
+                font-size rem(26px)
+                line-height rem(33px)
+        div.quote
+            p
+                font-size rem(68px)
+                line-height rem(73px)
+            p.author
+                font-size rem(30px)
+                line-height rem(33px)
