@@ -1,12 +1,13 @@
-extends ./layouts/_general.jade
-
-block body
+block section
   section#center
-    include partials/_menu.jade
+    
     .main-text
-      h1 Yacht Charter
+      h1 
+        block title
+          | The title
       p
-        | Aboard all of our luxurious charter yachts, from the performance sailing yachts to the new breed of charter megayachts, there is more on offer than mouth-watering cuisine, exemplary service, diverse destinations and world-class accommodation.
+        block description
+          | the description
     p.call-to-action
         | Choose your lifestyle:
     .clear

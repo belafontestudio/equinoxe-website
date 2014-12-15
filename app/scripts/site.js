@@ -1,3 +1,5 @@
 $(document).ready(function() {
-    $('#onepage').fullpage();
+    $('#onepage').fullpage({
+    	
+    });
 });
