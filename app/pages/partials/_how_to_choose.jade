@@ -1,0 +1,30 @@
+extends ../layouts/_multiple_range_selector.jade
+
+block title-smaller
+  | How To Choose Your Yacht:
+.clear
+    block yacht-size
+      ul#yacht-size
+        li
+          div.container-img
+            img.mega-yacht.img-spacer(src='../images/sprite/icon_select_yacht.svg', alt='Mega Yacht')
+            img.yacht(src='../images/sprite/icon_select_yacht.svg', alt='Yacht')
+          h2 First Title
+          p.description-text
+            | Aboard all of our luxurious charter yachts, from the performance sailing yachts to the new breed of charter megayachts, there is more on offer than mouth-watering cuisine, exemplary service, diverse destinations and world-class accommodation.
+          block button1
+        li
+          div.container-img
+            img.mega-yacht.img-spacer(src='../images/sprite/icon_select_yacht.svg', alt='Mega Yacht')
+            img.super-yacht(src='../images/sprite/icon_select_yacht.svg', alt='Super Yacht')
+          h2 Second Title
+          p.description-text
+            | Aboard all of our luxurious charter yachts, from the performance sailing yachts to the new breed of charter megayachts, there is more on offer than mouth-watering cuisine, exemplary service, diverse destinations and world-class accommodation.
+          block button2
+        li
+          div.container-img
+            img.mega-yacht(src='../images/sprite/icon_select_yacht.svg', alt='Mega Yacht')
+          h2 Third Title
+          p.description-text
+            | Aboard all of our luxurious charter yachts, from the performance sailing yachts to the new breed of charter megayachts, there is more on offer than mouth-watering cuisine, exemplary service, diverse destinations and world-class accommodation.
+          block button3
