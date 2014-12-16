@@ -1,4 +1,5 @@
 $(document).ready(function() {
     $('#onepage').fullpage();
-    console.log("dfsdgfdfg");
-});
+    height = $(window).height();
+    $('ul#latest-yachts-imgbackground li img').height(height);
+    });
