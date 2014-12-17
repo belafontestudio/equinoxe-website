@@ -4,10 +4,8 @@ block scripts
 block menu
   include ./partials/_menu.jade
 block body
-  #onepage
-    .section
-      include partials/_yacht_charter_intro.jade
-    .section
-      include partials/_yacht_size.jade
-    .section
-      include partials/_quote_charter.jade
+  ul#yachts-list-grid
+    li
+      img
+      ul.yacht-specs
+        li
