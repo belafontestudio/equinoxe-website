@@ -1,10 +1,9 @@
 extends ./layouts/_general.jade
-
 block vendor_css
 block scripts
 block menu
   include ./partials/_menu.jade
 block body
-  #onepage
-    .section
-      include partials/_grid_yachts.jade
+  ul#yachts-list-grid
+    include ./_yacht_card.jade
+    
