@@ -2,9 +2,24 @@ extends ./layouts/_general.jade
 block menu
   include ./partials/_menu.jade
 block body
+  
+  #sidr
+    // Your content
+    ul
+      li
+        a(href='#') List 1
+      |     
+      li.active
+        a(href='#') List 2
+      |     
+      li
+        a(href='#') List 3
+
   #onepage
     .section
+
       include partials/_home_landing.jade
+      a#simple-menu(href='#sidr') Toggle menu
     .section
       .slide
         include partials/_yacht_charter_intro.jade
