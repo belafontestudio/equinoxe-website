@@ -127,7 +127,7 @@ section#center
                 color yellow
             &:visited
                 opacity 0.5
-    ul#yacht-size, ul#latest-yachts
+    ul#yacht-size, ul#latest-yachts, ul#yachts-list-grid
         column(12/12)
         list-style-type none
         padding 0
@@ -188,6 +188,25 @@ section#center
                     text-align center
                     text-transform uppercase
                     left 0
+    ul#yachts-list-grid
+        margin-top 0
+        img
+            position relative
+            width 100%
+            height auto
+        h3.yacht-name
+            font-size 30px
+        li
+            column(12/12)
+            text-align left !important
+            ul.yacht-specs
+                li
+                    padding-left 100px
+                    span
+                        text-transform uppercase
+                        position absolute
+                        left 0
+ 
     
         
     div.main-text
@@ -253,6 +272,15 @@ section#center
             li 
                 column(6/12)
                 margin-bottom 0
+                
+        ul#yachts-list-grid
+            column(12/12)
+            li
+                column(6/12,cycle:2)
+                ul.yacht-specs
+                    column(6/6)
+                    li
+                        column(6/6)
 +above(768px)
     section#center.latest-grid
         position absolute
@@ -312,7 +340,7 @@ section#center
             p.author
                 font-size rem(20px)
                 line-height rem(23px)
-        ul#yacht-size, ul#latest-yachts
+        ul#yacht-size, ul#latest-yachts, ul#yachts-list-grid
             column(9/12)
             shift(2/12)
             text-align left !important
@@ -345,6 +373,22 @@ section#center
                     text-align center
                     text-transform uppercase
                     left 0
+        ul#yachts-list-grid
+            margin-top 0
+            column(9/12)
+            shift(2/12)
+            li
+                column(3/9,uncycle:2,cycle:3)
+                ul.yacht-specs
+                    column(3/3)
+                    li
+                        column(3/3)
+
+            
+                
+                    
+                    
+
         ul#latest-yachts
             column(12/12)
             shift(0/12)
