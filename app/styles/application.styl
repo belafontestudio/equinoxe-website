@@ -189,19 +189,26 @@ section#center
                     text-transform uppercase
                     left 0
     ul#yachts-list-grid
-        margin-top 0
-        img
+        margin-top 60px
+        div.container-yachtcard-img
             position relative
             width 100%
             height auto
+            overflow hidden
+            img
+                position relative
+                width 100%
+                height auto
         h3.yacht-name
             font-size 30px
         li
             column(12/12)
             text-align left !important
+            margin-bottom 80px
             ul.yacht-specs
                 li
                     padding-left 100px
+                    margin-bottom 0
                     span
                         text-transform uppercase
                         position absolute
@@ -374,7 +381,7 @@ section#center
                     text-transform uppercase
                     left 0
         ul#yachts-list-grid
-            margin-top 0
+            margin-top 60px
             column(9/12)
             shift(2/12)
             li
