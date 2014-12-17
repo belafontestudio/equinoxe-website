@@ -1,6 +1,16 @@
+//- extends ./layouts/_general.jade
+//- block vendor_css
+//- block scripts
 extends ./layouts/_general.jade
-block vendor_css
-block scripts 
+block menu
+  include ./partials/_menu.jade
 block body
-  include partials/_quote_charter.jade
-  include partials/_yacht_charter_intro.jade
+  #onepage
+    .section
+      include partials/_yacht_charter_intro.jade
+    .section
+      include partials/_yacht_size.jade
+    .section
+      include partials/_quote_charter.jade
+    .section
+      include partials/_latest_yacht_charter.jade
