@@ -22,6 +22,8 @@ div#landing-menu
             letter-spacing 1px
             text-transform uppercase
             text-decoration none
+        a:hover, a:active
+            color yellow !important
 div#bg-img-slide
     z-index: 0;
     position: absolute;
@@ -55,7 +57,7 @@ a#simple-menu
     z-index 999
     top 0
     left 0
-    padding 30px
+    padding 22px
     animation(fade 1s)
 a#simple-menu:hover
     background-color yellow
@@ -314,17 +316,24 @@ section#center
 
 +above(450px)
     div#landing-menu
+        position relative
         center(100%, 80px)
         overflow hidden
+        margin-bottom -40px
         .center
             overflow hidden
+            padding 0
+            .scroll
+                width 100%
+            ul
+                display inline-block
     section#center
         center(100%, 80px) 
         div.logo
             margin-top 100px
 +above(600px)
     div#landing-menu
-        //center(700px, 80px)  
+        center(700px, 80px)  
     section#center
         center(700px, 80px)
         div.main-text.home
@@ -351,7 +360,7 @@ section#center
                         column(6/6)
 +above(768px)
     div#landing-menu
-        //center(1400px, 0px)
+        center(1400px, 0px)
         ul#anchor-menu
             column(8/12)
             shift(2/12)

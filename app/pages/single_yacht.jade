@@ -1,0 +1,13 @@
+extends ./layouts/_general.jade
+
+block vendor_css
+block scripts
+block menu
+  include ./partials/_menu.jade
+block body
+  #onepage
+    .section
+      include ./partials/_maltesefalcon_yacht.jade
+    //- script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+    //- script
+    //-   $( window ).click(function(e) {console.log( e.target );});
