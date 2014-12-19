@@ -1,7 +1,10 @@
 @import '_base'
+
+
 #simple-menu
     z-index 9999
     position relative
+    
 div#landing-menu
     position fixed
     z-index 3
@@ -41,12 +44,13 @@ a#simple-menu
     top 0
     left 0
     padding 30px
+    animation(fade 1s)
 a#simple-menu:hover
     background-color yellow
 section#center
     z-index 2
     // background grey
-    padding 0 20px !important
+    padding 0 20px
     div.logo
             margin-top 100px
             column(8/12)
@@ -306,12 +310,14 @@ section#center
 //         background-color #333333
 +above(450px)
     section#center
-        padding 0 80px !important
+        center(100%, 80px)
+       
+        
         div.logo
             margin-top 100px
 +above(600px)
     section#center
-        max-width 700px !important
+        center(700px, 80px)
         div.main-text.home
             margin-top 50px
         div.logo
@@ -339,8 +345,7 @@ section#center
         position absolute
         top 60px !important
     section#center
-        max-width 1400px !important
-        padding 0 !important
+        center(1400px, 0px)
         div.main-text.home
             margin-top 60px
             shift(3/12)
