@@ -1,5 +1,7 @@
 @import '_base'
+@import 'nib'
 
+@import '_side_menu'
 
 #simple-menu
     z-index 9999
@@ -56,9 +58,21 @@ a#simple-menu
     top 0
     left 0
     padding 30px
-    animation(fade 1s)
+    
+   
+.hide  
+    opacity 0
+    transition(opacity, 1s)
+
+.show 
+    opacity 1
+    transition(opacity, 1s)
+
+   
 a#simple-menu:hover
+    transition(background-color, .5s)
     background-color yellow
+    
 section#center
     z-index 2
     // background grey
