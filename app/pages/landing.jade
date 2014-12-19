@@ -1,5 +1,6 @@
 extends ./layouts/_general.jade
 block menu
+  a#simple-menu(href='#sidr') Menu
   include ./partials/_menu.jade
 block body
   
@@ -9,7 +10,7 @@ block body
     .section
 
       include partials/_home_landing.jade
-      a#simple-menu(href='#sidr') Menu
+      
     .section
       .slide
         include partials/_yacht_charter_intro.jade
