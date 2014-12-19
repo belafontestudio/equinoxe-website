@@ -5,18 +5,13 @@
     z-index 9999
     position relative
     
-div#landing-menu
-    width 200%
-    padding 0 20px
-    position fixed
-    z-index 3
-    top 27px
-    overflow-x visible
+div#landing-menu 
     ul#anchor-menu
         li
-            position relative
-            float left
-            margin-right 60px
+            margin-right: 35px
+            text-align center !important
+        li:first-child
+            text-align left !important
         a
             font-family "Alegreya Sans", "Helvetica Neue", sans-serif
             font-weight 300
@@ -97,7 +92,7 @@ section#center
         line-height rem(31px) !important
         margin-bottom 20px !important
     p
-        font-weight regular
+        
         font-size rem(16px)
         line-height rem(23px)
         margin 0
@@ -315,30 +310,18 @@ section#center
             font-size rem(18px)
             line-height rem(21px)
             margin-top 25px
-// ul#latest-yachts-imgbackground
-//     z-index 1
-//     li
-//         position absolute
-//     li#artemide
-//         background-color #999999
-//     li#diana
-//         background-color #666666
-//     li#polar-star
-//         background-color #333333
+
+
 +above(450px)
     div#landing-menu
-        padding 0 80px
+        //center(100%, 80px)
     section#center
-        center(100%, 80px)
-       
-        
+        center(100%, 80px) 
         div.logo
             margin-top 100px
 +above(600px)
     div#landing-menu
-        column(12/12)
-        ul#anchor-menu
-            
+        //center(700px, 80px)  
     section#center
         center(700px, 80px)
         div.main-text.home
@@ -364,6 +347,14 @@ section#center
                     li
                         column(6/6)
 +above(768px)
+    div#landing-menu
+        //center(1400px, 0px)
+        ul#anchor-menu
+            column(8/12)
+            shift(2/12)
+            li
+                column(2/8)
+            
     section#center.latest-grid
         position absolute
         top 60px !important

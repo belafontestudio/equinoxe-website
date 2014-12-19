@@ -3,4 +3,5 @@ $(document).ready(function() {
     height = $(window).height();
     $('ul#latest-yachts-imgbackground li img').height(height);
     $('#simple-menu').sidr();
+
     });
