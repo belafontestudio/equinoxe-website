@@ -327,6 +327,9 @@ section#center
             margin-top 25px
     ul#single-yacht-specs
         li
+            font-size rem(16px)
+            line-height rem(16px)
+            margin-bottom 3px
             span
                 font-weight bold
                 text-transform uppercase
@@ -389,10 +392,7 @@ div.main-photo
                     column(6/6)
                     li
                         column(6/6)
-        ul#single-yacht-specs
-            li
-                display inline
-                margin-right 30px
+        
 
 +above(768px)
     div#landing-menu
@@ -506,7 +506,14 @@ div.main-photo
                     column(4/4)
                     li
                         column(4/4)
-
+        div#container-other-specs
+            center(1400px)
+            column(8/12)
+            shift(3/12)
+            div#other-specs
+                column(4/8)
+            div#other-description
+                column(4/8)
             
                 
                     
@@ -637,3 +644,7 @@ div.main-photo
             p.author
                 font-size rem(30px)
                 line-height rem(33px)
+    ul#single-yacht-specs
+        li
+            display inline
+            margin-right 27px
