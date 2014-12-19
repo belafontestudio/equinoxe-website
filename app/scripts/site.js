@@ -1,7 +1,15 @@
 $(document).ready(function() {
     $('#onepage').fullpage();
     height = $(window).height();
+    var container_width = $('ul#latest-yachts-imgbackground li').width();
     $('ul#latest-yachts-imgbackground li img').height(height);
+
+    $('ul#latest-yachts-imgbackground li img').each(function(){
+        var width = $(this).width();
+        $(this).css("left",-(width*0.5));
+        $(this).css("marginLeft", container_width*0.5);
+
+    });
     $('#simple-menu').sidr({
     	onOpen : menuOpen,
     	onClose : menuClose
