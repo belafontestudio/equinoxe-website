@@ -1,5 +1,10 @@
 $(document).ready(function() {
-    $('#onepage').fullpage();
+    $('#onepage').fullpage({
+        resize: false,
+        autoScrolling: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom'
+    });
     height = $(window).height();
     var container_width = $('ul#latest-yachts-imgbackground li').width();
     $('ul#latest-yachts-imgbackground li img').height(height);
