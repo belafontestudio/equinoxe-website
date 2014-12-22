@@ -9,6 +9,14 @@
     position relative
     
 div#landing-menu 
+     position fixed
+     
+     top 0
+     left 0
+     right 0
+     height 60px
+     div.center
+         top 20px
     ul#anchor-menu
         li
             margin-right: 35px
@@ -16,6 +24,7 @@ div#landing-menu
         li:first-child
             text-align left !important
         a
+            outline 0
             font-family "Alegreya Sans", "Helvetica Neue", sans-serif
             font-weight 300
             text-rendering optimizeLegibility
@@ -25,8 +34,10 @@ div#landing-menu
             letter-spacing 1px
             text-transform uppercase
             text-decoration none
-        a:hover, a:active
-            color yellow !important
+            &.active, &:hover, &:active
+                color yellow 
+            &.active
+                text-decoration underline    
 div#bg-img-slide
     z-index: 0;
     position: absolute;
@@ -56,7 +67,9 @@ a#simple-menu
     left 0
     padding 22px
     
-   
+ .fast-hide  
+    opacity 0
+    transition(opacity, 0)  
 .hide  
     opacity 0
     transition(opacity, 1s)
@@ -123,19 +136,7 @@ section#center
         text-transform uppercase
         font-style italic
         margin-bottom 30px
-    ul#anchor-menu
-        column(12/12)
-        list-style-type none
-        padding 0
-        margin-top 40px
-        margin-bottom 0
-        li
-            column(3/12)
-            text-align center !important
-            a:hover, a:active
-                color yellow
-            a:visited
-                opacity 0.5
+
     ul#call-to-action-menu-button
         column(12/12)
         list-style-type none
@@ -391,10 +392,14 @@ div.main-photo
 
 +above(450px)
     div#landing-menu
-        position relative
+       
         center(100%, 80px)
         overflow hidden
+<<<<<<< HEAD
         // margin-bottom -40px
+=======
+       
+>>>>>>> FETCH_HEAD
         .center
             overflow hidden
             padding 0
