@@ -21,7 +21,7 @@ $(document).ready(function() {
             }
         },
         onLeave: function(index, nextIndex, direction){
-            var menu = $('div#landing-menu div.center')
+            var hmenu = $('div#landing-menu div.center')
             if(index == 2 && direction == 'up'){
                 hmenu.addClass('fast-hide');
                 if (hmenu.hasClass('show')){
