@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="31px" height="26px" viewBox="0 0 31 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="21px" height="17px" viewBox="0 0 21 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.2.1 (9977) - http://www.bohemiancoding.com/sketch -->
-    <title></title>
+    <title>Rectangle 78 + Rectangle 78 + Rectangle 79</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-        <g id="Expedition" sketch:type="MSArtboardGroup" transform="translate(-260.000000, -187.000000)" fill="#FFFFFF">
-            <path d="M291,209.142853 C291,208.439727 290.41741,207.857137 289.714284,207.857137 L261.428536,207.857137 C260.72541,207.857137 260.14282,208.439727 260.14282,209.142853 L260.14282,211.714284 C260.14282,212.41741 260.72541,213 261.428536,213 L289.714284,213 C290.41741,213 291,212.41741 291,211.714284 L291,209.142853 Z M291,198.857126 C291,198.154 290.41741,197.57141 289.714284,197.57141 L261.428536,197.57141 C260.72541,197.57141 260.14282,198.154 260.14282,198.857126 L260.14282,201.428558 C260.14282,202.131683 260.72541,202.714273 261.428536,202.714273 L289.714284,202.714273 C290.41741,202.714273 291,202.131683 291,201.428558 L291,198.857126 Z M291,188.571399 C291,187.868274 290.41741,187.285684 289.714284,187.285684 L261.428536,187.285684 C260.72541,187.285684 260.14282,187.868274 260.14282,188.571399 L260.14282,191.142831 C260.14282,191.845957 260.72541,192.428547 261.428536,192.428547 L289.714284,192.428547 C290.41741,192.428547 291,191.845957 291,191.142831 L291,188.571399 Z" id="" sketch:type="MSShapeGroup"></path>
+        <g id="Expedition" sketch:type="MSArtboardGroup" transform="translate(-405.000000, -187.000000)" fill="#FFFFFF">
+            <g id="Rectangle-78-+-Rectangle-78-+-Rectangle-79" sketch:type="MSLayerGroup" transform="translate(405.000000, 187.000000)">
+                <rect id="Rectangle-78" sketch:type="MSShapeGroup" x="0" y="14" width="21" height="3"></rect>
+                <rect id="Rectangle-78" sketch:type="MSShapeGroup" x="0" y="7" width="21" height="3"></rect>
+                <rect id="Rectangle-79" sketch:type="MSShapeGroup" x="0" y="0" width="21" height="3"></rect>
+            </g>
         </g>
     </g>
 </svg>
