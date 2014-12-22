@@ -1,7 +1,7 @@
 $(document).ready(function() {
     $('#onepage').fullpage({
         menu: '#anchor-menu',
-        anchors:['landing','yacht-charter', 'sale-purchase','expeditions','heritage'],
+        anchors:['landing','yacht-charter', 'sale-purchase','expeditions', 'bareboat', 'heritage'],
         resize: false,
         autoScrolling: true,
         slidesNavigation: true,
