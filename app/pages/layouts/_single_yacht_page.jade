@@ -2,8 +2,8 @@ block section
   div.main-photo
     block main-photo
       div(class="img-holder", data-image="/images/yachts/noheea.png")
-        div.filter(style="-webkit-transform: translateZ(1px)")
-        section#center(style="-webkit-transform: translateZ(1px)")
+        div.filter
+        section#center
           .main-text
             h1 
               block title
@@ -30,14 +30,14 @@ block section
                 block single-yacht-guests
                   | number
 
-        block explain-call
-          p.call-to-action
-            block explain-call-text
-              | Call to action text
-        .clear
-        block call-to-action
-          | bottone CTA
-        .clear
+          block explain-call
+            p.call-to-action
+              block explain-call-text
+                | Call to action text
+          .clear
+          block call-to-action
+            | bottone CTA
+          .clear
     section#center
       div#plain-color-background
         div#container-other-specs
