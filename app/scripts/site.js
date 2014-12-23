@@ -1,4 +1,11 @@
+
+
+
 $(document).ready(function() {
+    
+    
+
+    
     $('#onepage').fullpage({
         menu: '#anchor-menu',
         anchors:['landing','yacht-charter', 'sale-purchase','expeditions', 'bareboat', 'heritage'],

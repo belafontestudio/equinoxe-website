@@ -1,4 +1,6 @@
 exports.config =
+    modules:
+        wrapper: false
     files:
         javascripts:
             joinTo:

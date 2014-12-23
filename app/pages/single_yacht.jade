@@ -8,6 +8,8 @@ block body
   #onepage
     .section
       include ./partials/_maltesefalcon_yacht.jade
-    //- script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
-    //- script
-    //-   $( window ).click(function(e) {console.log( e.target );});
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+    script(src="/jquery.imageScroll.js")
+    script
+      $('.img-holder').imageScroll({coverRatio: 0.80,extraHeight: 0});
+
