@@ -3,7 +3,8 @@ extends ./layouts/_general.jade
 block vendor_css
 block scripts
 block menu
-  include ./partials/_menu.jade
+  #landing-menu.subMenu
+    a#simple-menu(href='#sidr') Menu
 block body
   #onepage
     .section
@@ -11,5 +12,5 @@ block body
     script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
     script(src="/jquery.imageScroll.js")
     script
-      $('.img-holder').imageScroll({coverRatio: 0.99,extraHeight: 0});
+      $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
 
