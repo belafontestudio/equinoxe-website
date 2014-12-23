@@ -17,7 +17,7 @@ $(document).ready(function() {
             var hmenu = $('div#landing-menu div.center')
             //using anchorLink
             
-            if(anchorLink != 'landing'){
+            
                 if (!hmenu.hasClass('show')){
                     hmenu.addClass('show');
                 }
@@ -25,17 +25,17 @@ $(document).ready(function() {
                     hmenu.removeClass('fast-hide');
                 }
                 
-            }
+            
         },
         onLeave: function(index, nextIndex, direction){
             var hmenu = $('div#landing-menu div.center')
-            if(index == 2 && direction == 'up'){
+       
                 hmenu.addClass('fast-hide');
                 if (hmenu.hasClass('show')){
                     hmenu.removeClass('show');
                 }
                 
-            }  
+             
             
         }
 
