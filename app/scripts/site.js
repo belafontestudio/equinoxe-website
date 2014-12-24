@@ -1,11 +1,16 @@
-
-
-
 $(document).ready(function() {
-    
+
+    $('div#hslide1').fadeIn(3000);
+    $('a.item').each(function(){
+        $(this).hover(function(e){
+            var id = e.target.id;
+            var target = id.slice(-1);
+            hideSlides(target);
+
+        });
+    });
     
 
-    
     $('#onepage').fullpage({
         menu: '#anchor-menu',
         anchors:['landing','yacht-charter', 'sale-purchase','expeditions', 'bareboat', 'heritage'],
@@ -96,4 +101,20 @@ $(document).ready(function() {
     });
 
 });
+
+function hideSlides(target){
+        var counter = 1;
+       
+        $('div.hslide').each(function(){
+            if (counter != target){
+                $(this).fadeOut(1000);
+                 console.log(target);
+            }else{
+                $(this).fadeIn(1000);
+                console.log("ok"+target);
+            }
+            
+            counter++;
+        });
+    }
 
