@@ -6,6 +6,7 @@
 
 @import '_slides'
 @import '_modal'
+@import '_map'
 
 #simple-menu
     z-index 9999
@@ -47,7 +48,7 @@ div#landing-menu
         a
             outline 0
             font-family "Alegreya Sans", "Helvetica Neue", sans-serif
-            font-weight 300
+            font-weight 700
             text-rendering optimizeLegibility
             color white
             font-size 15px
@@ -58,8 +59,7 @@ div#landing-menu
             &.active, &:hover, &:active
                 color yellow 
             &.active
-
-                text-decoration underline 
+                border-bottom 1px solid yellow
                 
 div.imgbackground
     position absolute
