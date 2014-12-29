@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+    $('#enquire-modal').modal();
     $('div#hslide1').fadeIn(3000);
     $('a.item').each(function(){
         $(this).hover(function(e){

@@ -38,3 +38,93 @@
  
 .jquery-modal.blocker
   background navy-blue !important
+  
+
+div#enquire-modal
+    width 80%
+    margin 0 auto
+    box-shadow none
+    .logo
+        position relative
+        margin 0
+        margin-bottom 30px
+        text-align center
+        img
+            width 70%
+            max-width 230px
+    .form-horizontal
+        width 100%
+        margin 0 auto
+      fieldset
+          border none
+          padding 0
+          margin 0
+          width 100%
+          label
+              color white
+              font-family "Alegreya Sans", "Helvetica Neue", sans-serif
+              font-weight 300
+              text-rendering optimizeLegibility
+              text-transform uppercase
+              font-size rem(15px)
+              line-height rem(15px)
+              letter-spacing 1px
+          input, textarea
+              border 1px solid white
+              background-color transparent
+              padding 8px
+              margin-bottom 15px
+              color white
+              box-shadow none !important
+              outline none !important
+              width 100%
+          input:focus, textarea:focus
+              background-color white
+              box-shadow none !important
+              outline none !important
+              color yellow
+          div.control-group
+              position relative
+              float left
+          .control-group
+              width 100%
+          .control-group.text-area
+              width 100%
+          .control-group.checkboxes
+              width 100%
+              margin-bottom 15px
+              padding-left 20px
+              input
+                position absolute
+                left -20px
+              label.control-label
+                margin-left -20px
+              .controls
+                margin-top 10px
+                label
+                  margin-bottom 8px
+                
++above(768px)
+  div#enquire-modal
+    .form-horizontal
+        width 70%
+        margin 0 auto
+    fieldset
+        .control-group
+            width 48%
+            margin-right 2%
+        .control-group.text-area
+            width 98%
+        .control-group.checkboxes
+            label.checkbox
+                position relative
+                float left
+                width 48%
+                margin-right 2%
++above(940px)
+  div#enquire-modal
+    fieldset
+        .control-group.checkboxes
+            label.checkbox
+                width 33%
+                margin-right 0
