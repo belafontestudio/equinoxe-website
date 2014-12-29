@@ -41,9 +41,10 @@
   
 
 div#enquire-modal
-    width 80%
+    width 100%
     margin 0 auto
     box-shadow none
+    padding 30px
     .logo
         position relative
         margin 0
@@ -53,7 +54,7 @@ div#enquire-modal
             width 70%
             max-width 230px
     .form-horizontal
-        width 100%
+        width auto
         margin 0 auto
       fieldset
           border none
@@ -94,6 +95,12 @@ div#enquire-modal
               width 100%
               margin-bottom 15px
               padding-left 20px
+              label.checkbox
+                position relative
+                float left
+                width 100%
+                font-size 12px
+                line-height 12px
               input
                 position absolute
                 left -20px
@@ -103,24 +110,64 @@ div#enquire-modal
                 margin-top 10px
                 label
                   margin-bottom 8px
+          .control-group.submit
+            text-align center
+            width 100%
+            input
+              width 30%
+              background-color white
+              margin 20px 0 5px 0
+              color yellow
+              font-weight bold
+              text-transform uppercase
+              font-size rem(15px)
+              line-height rem(15px)
+              letter-spacing 1px
+            input:hover
+              opacity 0.6
+              
++below(450px)
+   div#enquire-modal
+     position relative !important
+     margin 0 !important
+     left 0 !important
+     top 0 !important
                 
++above(450px)
+  div#enquire-modal
+    width 80%
+    .form-horizontal
+      fieldset
+          width 100%
+          input, textarea
+              width 100%
+          .control-group
+              width 100%
+          .control-group.text-area
+              width 100%
+          .control-group.checkboxes
+              width 100%
+          .control-group.submit
+            width 100%
+            input
+              width 30%
+               
 +above(768px)
   div#enquire-modal
     .form-horizontal
         width 70%
         margin 0 auto
     fieldset
-        .control-group
+        .control-group.name, .control-group.surname, .control-group.phonenum, .control-group.mail
             width 48%
             margin-right 2%
         .control-group.text-area
-            width 98%
+            width 98% !important
         .control-group.checkboxes
-            label.checkbox
-                position relative
-                float left
-                width 48%
-                margin-right 2%
+          label.checkbox
+            position relative
+            float left
+            width 50%
 +above(940px)
   div#enquire-modal
     fieldset
