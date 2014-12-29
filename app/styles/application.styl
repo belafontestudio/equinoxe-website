@@ -453,6 +453,55 @@ section.center, section.center-parallax
                 line-height rem(36px)
                 margin 0
                 margin-bottom 40px
+                
+div#enquire-modal
+    width 80%
+    margin 0 auto
+    box-shadow none
+    .logo
+        position relative
+        margin 0
+        margin-bottom 30px
+        text-align center
+        img
+            width 70%
+            max-width 230px
+    fieldset
+        border none
+        padding 0
+        margin 0
+        width 100%
+        label
+            color white
+            font-family "Alegreya Sans", "Helvetica Neue", sans-serif
+            font-weight 300
+            text-rendering optimizeLegibility
+            text-transform uppercase
+            font-size rem(15px)
+            line-height rem(15px)
+            letter-spacing 1px
+        input, textarea
+            border 1px solid white
+            background-color transparent
+            padding 8px
+            margin-bottom 15px
+            color white
+            box-shadow none !important
+            outline none !important
+            width 100%
+        input:focus, textarea:focus
+            background-color white
+            box-shadow none !important
+            outline none !important
+            color yellow
+        div.control-group
+            position relative
+            float left
+        .control-group
+            width 100%
+        .control-group.text-area
+            width 100%  
+            
         
 
 +above(450px)
@@ -687,7 +736,13 @@ section.center, section.center-parallax
         //     background-color #666666
         // li#latest3
         //     background-color #333333
-            
+    div#enquire-modal 
+        fieldset
+            .control-group
+                width 48%
+                margin-right 2%
+            .control-group.text-area
+                width 100%       
     
                         
 +above(900px)
