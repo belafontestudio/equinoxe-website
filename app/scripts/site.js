@@ -16,6 +16,7 @@ $(document).ready(function() {
         anchors:['landing','yacht-charter', 'sale-purchase','expeditions', 'bareboat', 'heritage'],
         resize: false,
         autoScrolling: true,
+        scrollOverflow: true,
         loopTop: false,
         loopHorizontal: false,
         slidesNavigation: true,
