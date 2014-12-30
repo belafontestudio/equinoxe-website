@@ -1,5 +1,23 @@
+$( window ).resize(function() {
+
+  $.modal.resize();
+});
+
 $(document).ready(function() {
-    $('#enquire-modal').modal();
+    createLanding();
+    $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
+      $.fn.fullpage.setAllowScrolling(false);
+      $.fn.fullpage.setKeyboardScrolling(false);
+      
+      $.sidr("close");
+    });
+    $('#enquire-modal').on($.modal.CLOSE, function(event, modal) {
+
+      $.fn.fullpage.setAllowScrolling(true);
+      $.fn.fullpage.setKeyboardScrolling(true);
+    
+    });
+
     $('div#hslide1').fadeIn(3000);
     $('a.item').each(function(){
         $(this).hover(function(e){
@@ -11,45 +29,7 @@ $(document).ready(function() {
     });
     
 
-    $('#onepage').fullpage({
-        menu: '#anchor-menu',
-        anchors:['landing','yacht-charter', 'sale-purchase','expeditions', 'bareboat', 'heritage'],
-        resize: false,
-        autoScrolling: true,
-        scrollOverflow: true,
-        scrollBar: false,
-        responsive: 480,
-        loopTop: false,
-        loopHorizontal: false,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
-        afterLoad: function(anchorLink, index){
-            var hmenu = $('div#landing-menu div.center')
-            //using anchorLink
-            
-            
-                if (!hmenu.hasClass('show')){
-                    hmenu.addClass('show');
-                }
-                if (hmenu.hasClass('fast-hide')){
-                    hmenu.removeClass('fast-hide');
-                }
-                
-            
-        },
-        onLeave: function(index, nextIndex, direction){
-            var hmenu = $('div#landing-menu div.center')
-       
-                hmenu.addClass('fast-hide');
-                if (hmenu.hasClass('show')){
-                    hmenu.removeClass('show');
-                }
-                
-             
-            
-        }
-
-    });
+    
     height = $(window).height();
     var container_width = $('ul#latest-yachts-imgbackground li').width();
     $('ul#latest-yachts-imgbackground li img').height(height);
@@ -61,6 +41,7 @@ $(document).ready(function() {
 
     });
     $('#simple-menu').sidr({
+        displace: true,
     	onOpen : menuOpen,
     	onClose : menuClose
 	});
@@ -104,7 +85,47 @@ $(document).ready(function() {
     });
 
 });
+function createLanding(){
+    $('#onepage').fullpage({
+        menu: '#anchor-menu',
+        anchors:['landing','yacht-charter', 'sale-purchase','expeditions', 'bareboat', 'heritage'],
+        resize: false,
+        autoScrolling: true,
+        scrollOverflow: true,
+        scrollBar: false,
+        responsive: 480,
+        loopTop: false,
+        loopHorizontal: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        afterLoad: function(anchorLink, index){
+            var hmenu = $('div#landing-menu div.center')
+            //using anchorLink
+            
+            
+                if (!hmenu.hasClass('show')){
+                    hmenu.addClass('show');
+                }
+                if (hmenu.hasClass('fast-hide')){
+                    hmenu.removeClass('fast-hide');
+                }
+                
+            
+        },
+        onLeave: function(index, nextIndex, direction){
+            var hmenu = $('div#landing-menu div.center')
+       
+                hmenu.addClass('fast-hide');
+                if (hmenu.hasClass('show')){
+                    hmenu.removeClass('show');
+                }
+                
+             
+            
+        }
 
+    });
+}
 function hideSlides(target){
         var counter = 1;
        
@@ -114,7 +135,7 @@ function hideSlides(target){
                  console.log(target);
             }else{
                 $(this).fadeIn(1000);
-                console.log("ok"+target);
+                
             }
             
             counter++;
