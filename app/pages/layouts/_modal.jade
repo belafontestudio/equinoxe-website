@@ -5,13 +5,13 @@ div(id="enquire-modal", style="display:none;")
     form.form-horizontal
       fieldset
         // Text input
-        .control-group
+        .control-group.name
           label.control-label(for='textinput') Name
           .controls
             input#textinput.input-xlarge(name='textinput', type='text', placeholder='Marc', required='')
             
         // Text input
-        .control-group
+        .control-group.surname
           label.control-label(for='textinput') Surname
           .controls
             input#textinput.input-xlarge(name='textinput', type='text', placeholder='Rosenberg', required='')
@@ -36,13 +36,13 @@ div(id="enquire-modal", style="display:none;")
               input#checkboxes-4(type='checkbox', name='checkboxes', value='Bareboat')
               | Bareboat
         // Text input
-        .control-group
+        .control-group.phonenum
           label.control-label(for='textinput') Phone Number
           .controls
             input#textinput.input-xlarge(name='textinput', type='text', placeholder='placeholder', required='')
             
         // Text input
-        .control-group
+        .control-group.mail
           label.control-label(for='textinput') Email
           .controls
             input#textinput.input-xlarge(name='textinput', type='text', placeholder='johnappleseed@yahoo.it', required='')
@@ -53,7 +53,7 @@ div(id="enquire-modal", style="display:none;")
           .controls
             textarea#textarea(placeholder='Your message',name='textarea').
         <!-- Button -->
-        .control-group
+        .control-group.submit
           .controls
             input(type="submit" value="Submit")
 
