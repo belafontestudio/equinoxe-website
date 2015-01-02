@@ -153,8 +153,8 @@ function checkPage(){
 
         });
     }else{
-        $("body").css("overflow","auto")
-        $("html").css("overflow","auto")
+        $("body").addClass("reset-body")
+        
     }
 
 }

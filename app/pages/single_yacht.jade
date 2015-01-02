@@ -3,9 +3,7 @@ block body
   #onepage
     
     include ./partials/_maltesefalcon_yacht.jade
-    script(src="/jquery.imageScroll.js")
-    script
-        $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
+    
     .section
       .slide#slide_sy_1
         include partials/_single_yacht_interiors.jade
@@ -24,3 +22,6 @@ block body
         include partials/_single_yacht_exteriors.jade
       .slide#slide_sy_8
         include partials/_single_yacht_exteriors.jade
+  script(src="/jquery.imageScroll.js")
+  script
+        $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});

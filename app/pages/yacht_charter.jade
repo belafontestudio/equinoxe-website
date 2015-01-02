@@ -2,18 +2,21 @@ extends ./layouts/_general.jade
 
 block body
   #onepage
-    block main-photo
-      div(class="img-holder", data-image="/images/landing/detailboat.jpg")
-        section.center-parallax
-    .section
-      include partials/_yacht_charter_intro.jade
-    script(src="/jquery.imageScroll.js")
-    script
-      $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
-    div.bottom-spacer
-    .section
-      include partials/_yacht_size.jade
-    div.bottom-spacer
-    .section
-      include partials/_quote_charter.jade
-    div.bottom-spacer
+    div.main-photo
+      block main-photo
+        div(class="img-holder", data-image="/images/landing/detailboat.jpg")
+      section.center
+        div#plain-color-background
+          .section
+            include partials/_yacht_charter_intro.jade
+          
+          div.bottom-spacer
+          .section
+            include partials/_yacht_size.jade
+          div.bottom-spacer
+          .section
+            include partials/_quote_charter.jade
+          div.bottom-spacer
+  script(src="/jquery.imageScroll.js")
+  script
+    $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
