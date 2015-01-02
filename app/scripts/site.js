@@ -6,7 +6,7 @@ var imgLoad = imagesLoaded( 'body' );
 
 imgLoad.on( 'done', function( instance ) {
   console.log('DONE  - all images have been successfully loaded');
-  //$('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
+  $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
 });
 $(document).ready(function() {
     checkPage()
@@ -153,7 +153,8 @@ function checkPage(){
 
         });
     }else{
-        $("body").addClass("reset-body")
+        $("html").css("overflow","visible");
+        $("body").css("overflow","visible");
         
     }
 
