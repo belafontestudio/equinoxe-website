@@ -4,7 +4,8 @@ $( window ).resize(function() {
 });
 
 $(document).ready(function() {
-    createLanding();
+    checkPage()
+    
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
       $.fn.fullpage.setAllowScrolling(false);
       $.fn.fullpage.setKeyboardScrolling(false);
@@ -125,6 +126,13 @@ function createLanding(){
         }
 
     });
+}
+
+function checkPage(){
+    var pathArray = window.location.pathname.split( '/' );
+    if (pathArray[2] == "landing.html"){
+        createLanding();
+    }
 }
 function hideSlides(target){
         var counter = 1;
