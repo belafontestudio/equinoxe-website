@@ -21,14 +21,14 @@
 .imageHolder
     img
         bottom 0 
-    div.filter
-        background-color navy-blue
-        opacity(0.3)
-        position absolute
-        top 0
-        left 0
-        right 0
-        bottom 0
+    // div.filter
+    //     background-color navy-blue
+    //     opacity(0.3)
+    //     position absolute
+    //     top 0
+    //     left 0
+    //     right 0
+    //     bottom 0
         
     a
         transform(translateZ(1px))
@@ -457,8 +457,9 @@ section.center, section.center-parallax
 
                 
             
-        
-
++below(450px)       
+    .fp-controlArrow, .fp-slidesNav
+        display none !important
 +above(450px)
     ul#anchor-menu
         margin-left 0 !important
