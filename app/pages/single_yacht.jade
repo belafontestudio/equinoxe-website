@@ -1,16 +1,11 @@
 extends ./layouts/_general.jade
 
 block vendor_css
-block scripts
-block modals
-block menu
-  #landing-menu.subMenu
-    a#simple-menu(href='#sidr') Menu
+
 block body
   #onepage
     .section
       include ./partials/_maltesefalcon_yacht.jade
-    script(src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
     script(src="/jquery.imageScroll.js")
     script
       $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});

@@ -132,7 +132,7 @@ function hideSlides(target){
         $('div.hslide').each(function(){
             if (counter != target){
                 $(this).fadeOut(1000);
-                 console.log(target);
+                 
             }else{
                 $(this).fadeIn(1000);
                 

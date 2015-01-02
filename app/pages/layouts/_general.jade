@@ -28,8 +28,11 @@ html.no-js(lang="en")
 
   body
     block modals
-      h1 The modals
+      include ../partials/_enquire_modal.jade
     block menu
-      h1 The menu
+      #landing-menu.subMenu
+        a#simple-menu(href='#sidr') Menu
+    block sidemenu
+      include ../partials/_side_menu.jade
     block body
       h1 General Layout
