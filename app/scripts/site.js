@@ -2,7 +2,12 @@ $( window ).resize(function() {
 
   $.modal.resize();
 });
+var imgLoad = imagesLoaded( 'body' );
 
+imgLoad.on( 'done', function( instance ) {
+  console.log('DONE  - all images have been successfully loaded');
+  //$('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
+});
 $(document).ready(function() {
     checkPage()
     
@@ -132,6 +137,21 @@ function checkPage(){
     var pathArray = window.location.pathname.split( '/' );
     if (pathArray[2] == "landing.html"){
         createLanding();
+    }else{
+        $('#onepage').fullpage({
+        
+        resize: false,
+        autoScrolling: false,
+        scrollOverflow: true,
+        scrollBar: false,
+        responsive: 480,
+        loopTop: false,
+        loopHorizontal: false,
+        slidesNavigation: true,
+        slidesNavPosition: 'bottom',
+        
+
+    });
     }
 }
 function hideSlides(target){

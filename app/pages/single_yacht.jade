@@ -1,14 +1,14 @@
 extends ./layouts/_general.jade
 
-block vendor_css
+
 
 block body
   #onepage
-    .section
-      include ./partials/_maltesefalcon_yacht.jade
+    
+    include ./partials/_maltesefalcon_yacht.jade
     script(src="/jquery.imageScroll.js")
     script
-      $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
+        $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
     .section
       .slide#slide1
         include partials/_single_yacht_interiors.jade
