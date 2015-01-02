@@ -239,6 +239,7 @@ section.center, section.center-parallax
         column(12/12)
         list-style-type none
         padding 0
+        margin 0
         margin-top -80px
         text-align center !important
         li
@@ -453,9 +454,18 @@ section.center, section.center-parallax
                 
             
 +below(450px)       
-    .fp-controlArrow, .fp-slidesNav
+    .fp-controlArrow
         display none !important
+    // .fp-slidesNav
+    //     position relative !important
+    //     display inline-block !important
+    //     clear both !important
++below(768px)       
+    ul#yacht-size
+        margin-bottom 80px !important
 +above(450px)
+    // .fp-slidesNav
+    //     position absolute !important
     ul#anchor-menu
         margin-left 0 !important
     div#landing-menu
