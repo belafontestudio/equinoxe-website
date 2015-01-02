@@ -137,7 +137,7 @@ function checkPage(){
     var pathArray = window.location.pathname.split( '/' );
     if (pathArray[2] == "landing.html"){
         createLanding();
-    }else{
+    }else if(pathArray[2] == "single_yacht.html"){
         $('#onepage').fullpage({
         
         resize: false,
