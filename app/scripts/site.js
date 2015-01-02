@@ -140,19 +140,23 @@ function checkPage(){
     }else if(pathArray[2] == "single_yacht.html"){
         $('#onepage').fullpage({
         
-        resize: false,
-        autoScrolling: false,
-        scrollOverflow: true,
-        scrollBar: false,
-        responsive: 480,
-        loopTop: false,
-        loopHorizontal: false,
-        slidesNavigation: true,
-        slidesNavPosition: 'bottom',
+            resize: false,
+            autoScrolling: false,
+            scrollOverflow: true,
+            scrollBar: false,
+            responsive: 480,
+            loopTop: false,
+            loopHorizontal: false,
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom'
         
 
-    });
+        });
+    }else{
+        $("body").css("overflow","auto")
+        $("html").css("overflow","auto")
     }
+
 }
 function hideSlides(target){
         var counter = 1;
