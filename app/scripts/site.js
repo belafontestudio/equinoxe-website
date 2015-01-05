@@ -152,6 +152,21 @@ function checkPage(){
         
 
         });
+    }else if(pathArray[2] == "single_expedition.html"){
+        $('#onepage').fullpage({
+        
+            resize: false,
+            autoScrolling: false,
+            scrollOverflow: true,
+            scrollBar: false,
+            responsive: 480,
+            loopTop: false,
+            loopHorizontal: false,
+            slidesNavigation: true,
+            slidesNavPosition: 'bottom'
+        
+
+        });
     }else{
         $("html").css("overflow","visible");
         $("body").css("overflow","visible");

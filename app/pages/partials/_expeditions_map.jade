@@ -1,4 +1,4 @@
-sextends ../layouts/_map.jade
+extends ../layouts/_map.jade
 block map 
   script.
         // This example creates circles on the map, representing
@@ -46,7 +46,7 @@ block map
                     scrollwheel: false,
                     panControl: false,
                     streetViewControl: false,
-                    draggable : true,
+                    draggable : false,
                     overviewMapControl: false,
                     overviewMapControlOptions: {
                     opened: false,

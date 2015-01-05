@@ -1,14 +1,17 @@
 extends ./layouts/_general.jade
-
+block external-scripts
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBl3hDHGkv8Ohrz_AY7vlWRNSB_W5Esa9M&sensor=false&extension=.js') 
+  script(src="/maplabel.js") 
 block body
-  #onepage
+  #onepage(data-anchor="sale-purchase")
     block main-photo
-      div(class="img-holder", data-image="/images/landing/detailboat.jpg")
+      div(class="img-holder", data-image="/images/landing/desert1.jpg")
         section.center-parallax
     .section
-      include partials/_expeditions_intro.jade
-
+      include partials/_expeditions_planning_intro.jade
     div.bottom-spacer
     .section
       include partials/_quote_expeditions.jade
     div.bottom-spacer
+    .section.inner-map
+      include partials/_expeditions_map.jade
