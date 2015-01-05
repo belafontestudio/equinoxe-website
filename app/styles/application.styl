@@ -13,6 +13,8 @@
 #simple-menu
     z-index 9999
     position relative
+#enquire-modal, #contact-us-modal
+    z-index 4 !important
 .hslide
     display none
 .slide
@@ -588,7 +590,9 @@ section.center, section.center-parallax
             li.team
                 column(4/9)
             li.team.second-column
-                shift(1/9)  
+                shift(1/9)
+            li.bulletlist
+                column(3/9,cycle:3)  
             li
                 column(3/9)
                 text-align left !important

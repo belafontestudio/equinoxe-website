@@ -45,7 +45,7 @@ textarea#textarea
   resize vertical !important
   min-height 200px
 
-div#enquire-modal
+div#enquire-modal, div#contact-us-modal
     width 100%
     margin 0 auto
     box-shadow none
@@ -136,14 +136,14 @@ div#enquire-modal
               opacity 0.6
               
 +below(450px)
-   div#enquire-modal
+   div#enquire-modal, div#contact-us-modal
      position relative !important
      margin 0 !important
      left 0 !important
      top 0 !important
                 
 +above(450px)
-  div#enquire-modal
+  div#enquire-modal, div#contact-us-modal
     width 80%
     .form-horizontal
       fieldset
@@ -162,7 +162,7 @@ div#enquire-modal
               width 30%
                
 +above(768px)
-  div#enquire-modal
+  div#enquire-modal, div#contact-us-modal
     .form-horizontal
         width 70%
         margin 0 auto
@@ -178,7 +178,7 @@ div#enquire-modal
             float left
             width 50%
 +above(940px)
-  div#enquire-modal
+  div#enquire-modal, div#contact-us-modal
     fieldset
         .control-group.checkboxes
             label.checkbox
