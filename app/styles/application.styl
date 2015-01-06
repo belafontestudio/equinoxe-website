@@ -241,7 +241,7 @@ section.center, section.center-parallax
                 color yellow
             &:visited
                 opacity 0.5
-    ul#yacht-size, ul#latest-yachts, ul#yachts-list-grid
+    ul#yacht-size, ul#latest-yachts, ul#yachts-list-grid, ul#filter-menu
         column(12/12)
         list-style-type none
         padding 0
@@ -303,7 +303,7 @@ section.center, section.center-parallax
                     text-align center
                     text-transform uppercase
                     left 0
-    ul#yachts-list-grid
+    ul#yachts-list-grid, ul#filter-menu
         margin-top 60px
         a.card
             column(12/12)
@@ -504,7 +504,7 @@ section.center, section.center-parallax
                 column(6/12)
                 margin-bottom 0
                 
-        ul#yachts-list-grid
+        ul#yachts-list-grid, ul#filter-menu
             column(12/12)
             a.card
                 column(6/12,cycle:2)
@@ -580,7 +580,7 @@ section.center, section.center-parallax
             p.author
                 font-size rem(20px)
                 line-height rem(23px)
-        ul#yacht-size, ul#latest-yachts, ul#yachts-list-grid
+        ul#yacht-size, ul#latest-yachts, ul#yachts-list-grid, ul#filter-menu
             column(9/12)
             shift(2/12)
             text-align left !important
@@ -615,7 +615,7 @@ section.center, section.center-parallax
                     text-align center
                     text-transform uppercase
                     left 0
-        ul#yachts-list-grid
+        ul#yachts-list-grid, ul#filter-menu
             margin-top 60px
             column(9/12)
             shift(2/12)
@@ -708,7 +708,7 @@ section.center, section.center-parallax
                         
 +above(900px)
     section.center, section.center-parallax
-        ul#yachts-list-grid
+        ul#yachts-list-grid, ul#filter-menu
             margin-top 60px
             column(9/12)
             shift(2/12)
@@ -719,7 +719,56 @@ section.center, section.center-parallax
                 ul.yacht-specs
                     column(3/3)
                     li
-                        column(3/3)      
+                        column(3/3)  
+        ul#filter-menu
+            padding 0
+            margin 0
+            height 130px
+            background-color #183d79
+            position relative
+            border-radius 2px
+            li
+                width 17.5%
+                height 100%
+                margin 0
+                padding 0
+                text-align center !important
+                background-color transparent
+                a.filter
+                    width 100%
+                    height 100%
+                    position relative
+                    display inline-block
+                    padding-top 19px
+                div.icon-filter
+                    width 50px
+                    height 30px
+                    margin 0 auto 15px auto
+                    img
+                        max-height 100%
+                h3, span
+                    position relative
+                    margin 0
+                    padding 0
+                    font-weight 300
+                h3
+                    font-size rem(12px)
+                    line-height rem(12px)
+                    text-transform uppercase
+                    margin-bottom 5px
+                    letter-spacing 1.5px
+                span
+                    font-size rem(25px)
+                    line-height rem(25px)
+                    text-transform uppercase
+                a.button
+                    float right
+                    margin-top 13px
+            li:last-child
+                width 12.5%
+                background-color navy-blue
+            li:last-child:hover
+                background-color navy-blue
         
 +above(1080px)
     section.center.latest-grid
