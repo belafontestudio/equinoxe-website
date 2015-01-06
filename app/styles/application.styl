@@ -246,7 +246,7 @@ section.center, section.center-parallax
         list-style-type none
         padding 0
         margin 0
-        margin-top -80px
+        margin-top -50px
         text-align center !important
         li
             position relative
@@ -256,17 +256,17 @@ section.center, section.center-parallax
                 height auto
                 position relative
                 img.yacht
-                    width 60%
+                    width 50%
                     position absolute
                     bottom 0
                     left 22%
                 img.super-yacht
-                    width 80%
+                    width 70%
                     position absolute
                     bottom 0
                     left 12%
                 img.mega-yacht
-                    width 100%
+                    width 90%
                     position relative
                     left -2%
                     bottom -6px
@@ -462,16 +462,14 @@ section.center, section.center-parallax
 +below(450px)       
     .fp-controlArrow
         display none !important
-    // .fp-slidesNav
-    //     position relative !important
-    //     display inline-block !important
-    //     clear both !important
+    .slide.mobile-slide
+        display inline-block
 +below(768px)       
     ul#yacht-size
         margin-bottom 80px !important
 +above(450px)
-    // .fp-slidesNav
-    //     position absolute !important
+    .slide.mobile-slide
+        display none
     ul#anchor-menu
         margin-left 0 !important
     div#landing-menu
@@ -598,11 +596,11 @@ section.center, section.center-parallax
                 text-align left !important
                 div.container-img
                     img.yacht
-                        bottom 0
-                        left -2%
+                        bottom -5%
+                        left 7%
                     img.super-yacht
-                        bottom 0
-                        left -6%
+                        bottom -2%
+                        left -2%
                     img.mega-yacht
                         left -10%
                         bottom -6px
