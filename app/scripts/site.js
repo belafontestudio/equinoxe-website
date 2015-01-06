@@ -5,11 +5,53 @@ $( window ).resize(function() {
 var imgLoad = imagesLoaded( 'body' );
 
 imgLoad.on( 'done', function( instance ) {
-  console.log('DONE  - all images have been successfully loaded');
   $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});
 });
+
+
+enquire.register("screen and (max-width:480px)", {
+
+    // OPTIONAL
+    // If supplied, triggered when a media query matches.
+    match : function() {
+        console.log("match mobile");
+        loadSlide();
+    },
+    unmatch : function() {
+        console.log("unmatch mobile");
+        $.fn.fullpage.destroy('all');
+    }
+      
+});
+enquire.register("screen and (min-width: 480px)", {
+    match : function() {
+        console.log("match web");
+        removeSlide(); 
+    },  
+    unmatch : function() {
+        console.log("unmatch web");
+        $.fn.fullpage.destroy('all');
+    }
+});
+function removeSlide(){
+    $.get('/pages/slides/yacht_size_web.html', function(data){ 
+      $('#slide2a').remove();
+      $('#slide2b').remove();
+      $('#slide2c').remove();
+      $(data).insertAfter("#slide1");
+      checkPage(); 
+    });
+}
+function loadSlide(){
+    $.get('/pages/slides/yacht_size_mobile.html', function(data){ 
+      $('#slide2').remove();
+      $(data).insertAfter("#slide1");
+      checkPage(); 
+    });
+}
+
 $(document).ready(function() {
-    checkPage()
+    
     
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
       $.fn.fullpage.setAllowScrolling(false);
