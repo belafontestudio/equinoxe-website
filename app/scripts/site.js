@@ -56,7 +56,13 @@ function loadSlide(){
 }
 
 $(document).ready(function() {
-
+$( "#slider" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ]
+    });
+    
     
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
       $.fn.fullpage.setAllowScrolling(false);

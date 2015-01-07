@@ -20,9 +20,16 @@
     "Parallax-ImageScroll": "~0.1.4",
     "jquery-modal": "~0.5.2",
     "imagesloaded": "~3.1.8",
-    "enquire": "~2.1.2"
+    "enquire": "~2.1.2",
+    "jqueryui": "~1.11.2"
   },
   "overrides": {
+    "jqueryui": {
+      "main": [
+        "./themes/sunny/jquery-ui.css",
+        "./jquery-ui.js"
+      ]
+    },
     "jquery-modal": {
       "main": [
         "./jquery.modal.js",
