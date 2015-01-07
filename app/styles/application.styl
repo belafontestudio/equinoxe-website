@@ -455,6 +455,66 @@ section.center, section.center-parallax
                 line-height rem(36px)
                 margin 0
                 margin-bottom 40px
+    ul#filter-menu
+        padding 0
+        margin 0
+        height auto
+        background-color #183d79
+        position relative
+        border-radius 2px
+        li
+            width 50% !important
+            height 130px
+            margin 0 !important
+            padding 0
+            border-right 1px solid navy-blue
+            text-align center !important
+            background-color transparent
+            position relative
+            float left
+            border-top 1px solid navy-blue
+            a.filter
+                width 100%
+                height 100%
+                position relative
+                display inline-block
+                padding-top 19px
+            div.icon-filter
+                width 110px
+                height 30px
+                margin 0 auto 15px auto
+                img
+                    max-height 100%
+            h3, span
+                position relative
+                margin 0
+                padding 0
+                font-weight 300
+            h3
+                font-size rem(12px)
+                line-height rem(12px)
+                text-transform uppercase
+                margin-bottom 5px
+                letter-spacing 1.5px
+            span
+                font-size rem(25px)
+                line-height rem(25px)
+                text-transform uppercase
+        li:nth-child(even)
+            border-right none
+    div.reset-button
+        column(12/12)
+        background-color #183d79
+        margin-bottom 0
+        height auto
+        display inline-block
+        border-top 1px solid navy-blue
+        a.button
+            text-align center
+            width 144px
+            margin-left -72px
+            left 50%
+            border none
                 
 
                 
@@ -514,6 +574,8 @@ section.center, section.center-parallax
                     column(6/6)
                     li
                         column(6/6)
+        
+        
         
 
 +above(768px)
@@ -640,7 +702,16 @@ section.center, section.center-parallax
                         position absolute
                         left -80px
                         top 0
-            
+        ul#filter-menu
+            width 66%
+            margin-top 0
+            li
+                a.filter
+                    text-align center
+        div.reset-button
+            width 66%
+            left 17.1666666666667%
+            position relative
 
             
   
@@ -697,12 +768,6 @@ section.center, section.center-parallax
                 position absolute
                 width auto
                 opacity 0.6
-        // li#latest1
-        //     background-color #999999
-        // li#latest2
-        //     background-color #666666
-        // li#latest3
-        //     background-color #333333
                 
     
                         
@@ -721,62 +786,23 @@ section.center, section.center-parallax
                     li
                         column(3/3)  
         ul#filter-menu
-            padding 0
-            margin 0
             height 130px
-            background-color #183d79
-            position relative
-            border-radius 2px
+            margin-top 0
             li
-                width 16.66%
+                width 16.66% !important
                 height 100%
-                margin 0
-                padding 0
+                border-right 1px solid navy-blue
                 text-align center !important
                 background-color transparent
-                a.filter
-                    width 100%
-                    height 100%
-                    position relative
-                    display inline-block
-                    padding-top 19px
-                div.icon-filter
-                    width 110px
-                    height 30px
-                    margin 0 auto 15px auto
-                    img
-                        max-height 100%
-                h3, span
-                    position relative
-                    margin 0
-                    padding 0
-                    font-weight 300
-                h3
-                    font-size rem(12px)
-                    line-height rem(12px)
-                    text-transform uppercase
-                    margin-bottom 5px
-                    letter-spacing 1.5px
-                span
-                    font-size rem(25px)
-                    line-height rem(25px)
-                    text-transform uppercase
+                border-top none
+            li:nth-child(even)
+                border-right 1px solid navy-blue
+            li:last-child
+                border-right none
         div.reset-button
             column(9/12)
             shift(2/12)
-            background-color #183d79
-            margin-bottom 0
-            height auto
-            display inline-block
-            border-top 1px solid navy-blue
-            a.button
-                text-align center
-                width 144px
-                margin-left -72px
-                left 50%
-                border none
-        // div.reset-button:hover
-        //     background-color navy-blue
+
         
 +above(1080px)
     section.center.latest-grid
