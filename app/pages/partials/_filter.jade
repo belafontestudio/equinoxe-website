@@ -1,3 +1,6 @@
+block external-scripts
+  script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBl3hDHGkv8Ohrz_AY7vlWRNSB_W5Esa9M&sensor=false&extension=.js') 
+  script(src="/maplabel.js")
 ul#filter-menu
   li
     a.filter(href="#")
@@ -47,6 +50,9 @@ ul#filter-menu
         | Sale / Charter
       span
         | Charter
+div.filter-opened-section
+  //- include _filter_length.jade
+  include _filter_map.jade
 div.reset-button
   a.button(href="#") Reset
     

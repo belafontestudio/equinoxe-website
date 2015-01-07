@@ -7,6 +7,7 @@
 @import '_slides'
 @import '_modal'
 @import '_map'
+@import '_filters'
 
 
 
@@ -515,6 +516,11 @@ section.center, section.center-parallax
             margin-left -72px
             left 50%
             border none
+    div.filter-opened-section
+        column(12/12)
+        background-color #183d79
+        height 400px
+        border-top 1px solid navy-blue
                 
 
                 
@@ -708,7 +714,7 @@ section.center, section.center-parallax
             li
                 a.filter
                     text-align center
-        div.reset-button
+        div.reset-button, div.filter-opened-section
             width 66%
             left 17.1666666666667%
             position relative
@@ -799,7 +805,7 @@ section.center, section.center-parallax
                 border-right 1px solid navy-blue
             li:last-child
                 border-right none
-        div.reset-button
+        div.reset-button, div.filter-opened-section
             column(9/12)
             shift(2/12)
 
