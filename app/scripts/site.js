@@ -1,6 +1,7 @@
 $( window ).resize(function() {
 
   $.modal.resize();
+  $.fn.fullpage.reBuild();
 });
 var imgLoad = imagesLoaded( 'body' );
 
@@ -47,11 +48,19 @@ function loadSlide(){
       $('#slide2').remove();
       $(data).insertAfter("#slide1");
       checkPage(); 
+
     });
 }
 
 $(document).ready(function() {
-    
+    $('#anchor-menu').ReSmenu({
+        menuClass:    'responsive_menu',   // Responsive menu class
+        selectId:     'resmenu',          // select ID
+        textBefore:   false,               // Text to add before the mobile menu
+        selectOption: false,               // First select option
+        activeClass:  'current-menu-item', // Active menu li class
+        maxWidth:     768                  // Size to which the menu is responsive
+    });
     
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
       $.fn.fullpage.setAllowScrolling(false);
