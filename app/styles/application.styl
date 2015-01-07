@@ -728,7 +728,7 @@ section.center, section.center-parallax
             position relative
             border-radius 2px
             li
-                width 16.6%
+                width 16.66%
                 height 100%
                 margin 0
                 padding 0
@@ -761,14 +761,22 @@ section.center, section.center-parallax
                     font-size rem(25px)
                     line-height rem(25px)
                     text-transform uppercase
-                a.button
-                    float right
-                    margin-top 38px
-            li:last-child
-                width 12.5%
-                background-color navy-blue
-            li:last-child:hover
-                background-color navy-blue
+        div.reset-button
+            column(9/12)
+            shift(2/12)
+            background-color #183d79
+            margin-bottom 0
+            height auto
+            display inline-block
+            border-top 1px solid navy-blue
+            a.button
+                text-align center
+                width 144px
+                margin-left -72px
+                left 50%
+                border none
+        // div.reset-button:hover
+        //     background-color navy-blue
         
 +above(1080px)
     section.center.latest-grid
