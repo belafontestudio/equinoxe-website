@@ -116,6 +116,7 @@ function rangeSlider(){
 }
 $(document).ready(function() {
 filterMenu();
+rangeSlider();
 $( "#slider-single" ).slider({
      min: 0,
      max: 2,
