@@ -9,6 +9,18 @@
 @import '_map'
 @import '_filters'
 
+a
+   outline 0 !important
+   
+section.center.filter-hide
+    display none
+div.filter-opened-section
+    height 0
+    display none
+
+*:focus
+    outline none
+
 #sailogy_holder
     width 100%
     background navy-blue
@@ -355,7 +367,7 @@ section.center, section.center-parallax
                         left 0
                 li:last-child
                     padding-bottom 15px !important
-        li:hover
+        li:hover, li.active
             background-color yellow
             div.container-yachtcard-img
                 img

@@ -54,20 +54,77 @@ function loadSlide(){
 
     });
 }
+function filterMenu(){
+    $("a.filter").each(function(){
+        $(this).click(function(e){
+            e.stopPropagation();
+            var id = $(this).attr('id');
+            var target = id.slice(-1);
+            activeFS(target);
+            activeLI(target);
+            e.preventDefault();
+            $("div.filter-opened-section").slideDown();
+        });
+    });
+}
+function activeFS(target){
+    var counter = 1;
 
-$(document).ready(function() {
-$( "#slider" ).slider({
+        $('section.filter-hide').each(function(){
+            if (counter != target){
+                $(this).fadeOut(0);
+                 
+            }else{
+                $(this).delay(500).fadeIn(1000);
+                
+            }
+            
+            counter++;
+        });
+}
+function activeLI(target){
+    var counter = 1;
+
+        $('a.filter').each(function(){
+            if (counter != target){
+                $(this).parent().removeClass("active");
+                 
+            }else{
+                $(this).parent().addClass("active");
+                
+            }
+            
+            counter++;
+        });
+};
+
+function rangeSlider(){
+    $( "#slider-range" ).slider({
       range: true,
       min: 0,
       max: 500,
-      values: [ 75, 300 ]
+      step: 5,
+      values: [ 0, 500 ],
+      slide: function( event, ui ) {
+        $( "p.min-price" ).text( "€" + ui.values[ 0 ] + "k" );
+        $( "p.max-price" ).text( "€" + ui.values[ 1 ] + "k");
+
+      }
     });
+    $( "p.min-price" ).text( "€" + $( "#slider-range" ).slider( "values", 0 )+ "k");
+    $( "p.max-price" ).text( "€" + $( "#slider-range" ).slider( "values", 1 )+ "k");
+}
+$(document).ready(function() {
+filterMenu();
 $( "#slider-single" ).slider({
      min: 0,
      max: 2,
      step: 1
    });
-    
+
+
+
+
     
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
       $.fn.fullpage.setAllowScrolling(false);

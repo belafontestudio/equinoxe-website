@@ -3,7 +3,7 @@ block external-scripts
   script(src="/maplabel.js")
 ul#filter-menu
   li
-    a.filter(href="#")
+    a.filter#f1(href="#")
       div.icon-filter
         img(src='../images/sprite/filter_destination_icon.svg', alt='Destination')
       h3
@@ -11,7 +11,7 @@ ul#filter-menu
       span
         | Maldive
   li
-    a.filter(href="#")
+    a.filter#f2(href="#")
       div.icon-filter
         img(src='../images/sprite/filter_price_icon.svg', alt='Price')
       h3
@@ -19,7 +19,7 @@ ul#filter-menu
       span
         | 15-60K
   li
-    a.filter(href="#")
+    a.filter#f3(href="#")
       div.icon-filter
         img(src='../images/sprite/filter_guests_icon.svg', alt='Guests')
       h3
@@ -27,7 +27,7 @@ ul#filter-menu
       span
         | 10-20
   li
-    a.filter(href="#")
+    a.filter#f4(href="#")
       div.icon-filter
         img(src='../images/sprite/filter_size_icon.svg', alt='Length')
       h3
@@ -35,7 +35,7 @@ ul#filter-menu
       span
         | 40-60 mt
   li
-    a.filter(href="#")
+    a.filter#f5(href="#")
       div.icon-filter
         img(src='../images/sprite/filter_propulsion_icon.svg', alt='Propulsion')
       h3
@@ -43,7 +43,7 @@ ul#filter-menu
       span
         | Motor
   li
-    a.filter(href="#")
+    a.filter#f6(href="#")
       div.icon-filter
         img(src='../images/sprite/filter_salecharter_icon.svg', alt='Propulsion')
       h3
@@ -51,11 +51,13 @@ ul#filter-menu
       span
         | Charter
 div.filter-opened-section
+  include _filter_map.jade
+  include _filter_price.jade
   include _filter_length.jade
-  //- include _filter_price.jade
-  //- include _filter_salecharter.jade
-  //- include _filter_map.jade
-  //- include _filter_propulsion.jade
+  include _filter_propulsion.jade
+  include _filter_salecharter.jade
+  
+  
 div.reset-button
   a.button(href="#") Reset
 
