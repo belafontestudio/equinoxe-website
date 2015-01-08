@@ -1,6 +1,24 @@
-section.center.price-slider
+section.center.price-slider, section.center.sale-charter
   padding-left 0 !important
   padding-right 0 !important
+section.center.sale-charter
+  width 80%
+  height auto
+  position relative
+  top 50%
+  margin-top -65px
+  a#sale, a#charter
+    left 0
+    width 100%
+    text-align center
+    position relative
+    display inline-block
+    margin 0 auto
+    font-size rem(40px)
+    line-height rem(40px)
+    text-transform uppercase
+  a#sale
+    margin-bottom -2px
 section.center
   ul#yacht-size.filter
     margin 0
@@ -49,7 +67,7 @@ section.center
         width 26.9% !important
         
   div#slider, div#slider-numbers
-    max-width 90%
+    max-width 80%
     margin 0 auto
   div#slider-numbers
     margin-top 180px
@@ -67,8 +85,16 @@ section.center
   div#slider
     .ui-widget-header
       background yellow
-+above(768px)
-  section.center
-    div#slider, div#slider-numbers
-      max-width 80%
+
++above(900px)
+  section.center.sale-charter
+    width 80%
+    top 50%
+    margin-top -35px
+    a#sale, a#charter
+      width 50%
+    a#sale
+      margin-bottom 0
+      margin-right -2px
+
 
