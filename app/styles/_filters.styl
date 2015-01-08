@@ -1,4 +1,50 @@
-section.center.price-slider, section.center.sale-charter, section.center.propulsion
+section.center.filter-mobile
+  position relative
+  width 100%
+  div#slider-single
+    max-width 80%
+    margin 0 auto
+  ul#yacht-size-mobile
+    left 0
+    width 100%
+    margin 20px auto
+    position relative
+    li#filter-super-yacht, li#filter-yacht
+      display none
+    li
+      width 100%
+      margin 0
+      h2, p
+        text-align center
+      div.container-img
+        height 214px !important
+        position relative
+        img.yacht
+          left 50%
+          margin-left -52px
+          height 55%
+          width auto
+          position absolute
+          bottom 0
+        img.super-yacht
+          left 50%
+          margin-left -81px
+          height 80%
+          width auto
+          position absolute
+          bottom 0
+        img.mega-yacht
+          left 50%
+          margin-left -103px
+          height 100%
+          width auto
+          position absolute
+          bottom 0
+        
+  
+section.center.filter-monitor
+  display none
+section.center.price-slider, section.center.sale-charter, section.center.propulsion, section.center.filter-mobile
   padding-left 0 !important
   padding-right 0 !important
 section.center.sale-charter
@@ -99,5 +145,11 @@ section.center
     a#sale
       margin-bottom 0
       margin-right -2px
++above(1200px)
+  section.center.filter-mobile
+    display none
+  section.center.filter-monitor
+    display inline-block
+    width 100%
 
 

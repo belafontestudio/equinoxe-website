@@ -62,6 +62,11 @@ $( "#slider" ).slider({
       max: 500,
       values: [ 75, 300 ]
     });
+$( "#slider-single" ).slider({
+     min: 0,
+     max: 2,
+     step: 1
+   });
     
     
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
