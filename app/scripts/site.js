@@ -97,7 +97,22 @@ function activeLI(target){
             counter++;
         });
 };
+function guestSlider(){
+    $( "#slider-guest" ).slider({
+      range: true,
+      min: 1,
+      max: 15,
+      step: 1,
+      values: [ 1, 15],
+      slide: function( event, ui ) {
+        $( "p.min-guest" ).text( ui.values[ 0 ] + "guests" );
+        $( "p.max-guest" ).text( ui.values[ 1 ] + "guests");
 
+      }
+    });
+    $( "p.min-guest" ).text( $( "#slider-guest" ).slider( "values", 0 )+ "guests");
+    $( "p.max-guest" ).text( $( "#slider-guest" ).slider( "values", 1 )+ "guests");
+}
 function rangeSlider(){
     $( "#slider-range" ).slider({
       range: true,
@@ -117,11 +132,12 @@ function rangeSlider(){
 $(document).ready(function() {
 filterMenu();
 rangeSlider();
-$( "#slider-single" ).slider({
-     min: 0,
-     max: 2,
-     step: 1
-   });
+guestSlider();
+    $( "#slider-single" ).slider({
+         min: 0,
+         max: 2,
+         step: 1
+       });
 
 
 
