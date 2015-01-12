@@ -1,9 +1,12 @@
 $( window ).resize(function() {
 
   $.modal.resize();
+
   $.fn.fullpage.reBuild();
   centerImagesInGrid();
 });
+
+
 var imgLoad = imagesLoaded( 'body' );
 
 imgLoad.on( 'done', function( instance ) {
@@ -19,7 +22,7 @@ enquire.register("screen and (max-width:480px)", {
     // If supplied, triggered when a media query matches.
     match : function() {
         console.log("match mobile");
-        loadSlide();
+        mobileSlide();
     },
     unmatch : function() {
         console.log("unmatch mobile");
@@ -30,28 +33,30 @@ enquire.register("screen and (max-width:480px)", {
 enquire.register("screen and (min-width: 480px)", {
     match : function() {
         console.log("match web");
-        removeSlide(); 
+        webSlide(); 
     },  
     unmatch : function() {
         console.log("unmatch web");
         $.fn.fullpage.destroy('all');
     }
 });
-function removeSlide(){
-    $.get('/pages/slides/yacht_size_web.html', function(data){ 
-      $('#slide2a').remove();
-      $('#slide2b').remove();
-      $('#slide2c').remove();
-      $(data).insertAfter("#slide1");
+function webSlide(){
+    $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){ 
       checkPage(); 
+      homeSlides();
+      setTimeout(function() {
+          
+      }, 5000);
     });
-}
-function loadSlide(){
-    $.get('/pages/slides/yacht_size_mobile.html', function(data){ 
-      $('#slide2').remove();
-      $(data).insertAfter("#slide1");
-      checkPage(); 
 
+}
+function mobileSlide(){
+    $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){ 
+      checkPage(); 
+      homeSlides();
+      setTimeout(function() {
+          
+      }, 5000);
     });
 }
 function filterMenu(){
@@ -130,9 +135,9 @@ function rangeSlider(){
     $( "p.max-price" ).text( "€" + $( "#slider-range" ).slider( "values", 1 )+ "k");
 }
 $(document).ready(function() {
-filterMenu();
-rangeSlider();
-guestSlider();
+    filterMenu();
+    rangeSlider();
+    guestSlider();
     $( "#slider-single" ).slider({
          min: 0,
          max: 2,
@@ -155,10 +160,8 @@ guestSlider();
       $.fn.fullpage.setKeyboardScrolling(true);
     
     });
-    homeSlides();
-    setTimeout(function() {
-      
-    }, 5000);
+
+    
 
     
     
