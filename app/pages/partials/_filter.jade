@@ -51,6 +51,8 @@ ul#filter-menu
       span
         | Charter
 div.filter-opened-section
+  a.close-filter(href="#")
+    img(src='../images/sprite/hamburger_close.svg', alt='Close')
   include _filter_map.jade
   include _filter_price.jade
   include _filter_guests.jade
