@@ -5,41 +5,39 @@
     max-width 80%
     margin 0 auto
   ul#yacht-size-mobile
-    left 0
-    width 100%
-    margin 20px auto
-    position relative
-    li#filter-super-yacht, li#filter-yacht
-      display none
+    left 0 !important
+    width 100% !important
+    height 290px
+    margin 28px auto !important
+    position relative !important
+    li#filter-yacht, li#filter-super-yacht, li#filter-mega-yacht
+      position absolute
+    // li#filter-yacht, li#filter-super-yacht
+    //   display none
     li
-      width 100%
+      width 100% !important
       margin 0
       h2, p
         text-align center
       div.container-img
         height 214px !important
         position relative
+        width 100%
+        img.yacht, img.super-yacht, img.mega-yacht
+          left 50% !important
+          width auto !important
+          position absolute !important
+          bottom 0 !important
         img.yacht
-          left 50%
-          margin-left -52px
+          margin-left -52px !important
           height 55%
-          width auto
-          position absolute
-          bottom 0
         img.super-yacht
-          left 50%
-          margin-left -81px
+          margin-left -81px !important
           height 80%
-          width auto
-          position absolute
-          bottom 0
         img.mega-yacht
-          left 50%
-          margin-left -103px
+          margin-left -103px !important
           height 100%
-          width auto
-          position absolute
-          bottom 0
+          
         
   
 .filter-monitor
