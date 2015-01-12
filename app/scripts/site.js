@@ -1,3 +1,6 @@
+var arrayFullPage = ["landing.html","",""];
+
+
 $( window ).resize(function() {
 
   $.modal.resize();
@@ -22,7 +25,7 @@ enquire.register("screen and (max-width:480px)", {
     // If supplied, triggered when a media query matches.
     match : function() {
         console.log("match mobile");
-        mobileSlide();
+        checkPage("mobile");
     },
     unmatch : function() {
         console.log("unmatch mobile");
@@ -33,32 +36,14 @@ enquire.register("screen and (max-width:480px)", {
 enquire.register("screen and (min-width: 480px)", {
     match : function() {
         console.log("match web");
-        webSlide(); 
+        checkPage("web"); 
     },  
     unmatch : function() {
         console.log("unmatch web");
         $.fn.fullpage.destroy('all');
     }
 });
-function webSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){ 
-      checkPage(); 
-      homeSlides();
-      setTimeout(function() {
-          
-      }, 5000);
-    });
 
-}
-function mobileSlide(){
-    $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){ 
-      checkPage(); 
-      homeSlides();
-      setTimeout(function() {
-          
-      }, 5000);
-    });
-}
 function filterMenu(){
     $("a.filter").each(function(){
         $(this).click(function(e){
@@ -144,43 +129,35 @@ $(document).ready(function() {
          step: 1
        });
 
-
-
-
-    
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
-      $.fn.fullpage.setAllowScrolling(false);
-      $.fn.fullpage.setKeyboardScrolling(false);
-      
-      $.sidr("close");
+        
+        if($(".fullpage-wrapper")[0]){
+            $.fn.fullpage.setAllowScrolling(false);
+            $.fn.fullpage.setKeyboardScrolling(false);
+        }
+        $.sidr("close");
     });
     $('#enquire-modal').on($.modal.CLOSE, function(event, modal) {
-
-      $.fn.fullpage.setAllowScrolling(true);
-      $.fn.fullpage.setKeyboardScrolling(true);
-    
+        if($(".fullpage-wrapper")[0]){
+            $.fn.fullpage.setAllowScrolling(true);
+            $.fn.fullpage.setKeyboardScrolling(true);
+        }
     });
 
-    
-
-    
-    
-
-    
     
     $('#simple-menu').sidr({
         displace: true,
-    	onOpen : menuOpen,
-    	onClose : menuClose
-	});
+        onOpen : menuOpen,
+        onClose : menuClose
+    });
 
 
     function menuOpen() {
-    	var menu = $('a#simple-menu');
-    	menu.addClass('hide');
-		if (menu.hasClass('show')){
-			menu.removeClass('show');
-		}
+        var menu = $('a#simple-menu');
+        menu.addClass('hide');
+        if (menu.hasClass('show')){
+            menu.removeClass('show');
+        }
         var hmenu = $('div#landing-menu div.center');
             
         if (!hmenu.hasClass('hide')){
@@ -193,11 +170,11 @@ $(document).ready(function() {
         
     };
     function menuClose() {
-    	var menu = $('a#simple-menu');
-    	menu.addClass('show');
-    	if (menu.hasClass('hide')){
-    		menu.removeClass('hide');
-    	}
+        var menu = $('a#simple-menu');
+        menu.addClass('show');
+        if (menu.hasClass('hide')){
+            menu.removeClass('hide');
+        }
         var hmenu = $('div#landing-menu div.center');
             
         if (!hmenu.hasClass('show')){
@@ -209,7 +186,7 @@ $(document).ready(function() {
     };
 
     $('a#closeMenu').click(function(){
-    	$.sidr("close");
+        $.sidr("close");
     });
 
 });
@@ -254,11 +231,38 @@ function createLanding(){
 
     });
 }
+function hasFullPage(page){
+    $(arrayFullPage).each(function(){
 
-function checkPage(){
+    });
+}
+function webSlide(){
+    $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){ 
+      homeSlides();
+      createLanding();
+    });
+
+}
+function mobileSlide(){
+    $("#onepage").load("/pages/slides/yacht_size_mobile.html",function(data){ 
+        homeSlides();
+        createLanding();
+    });
+}
+
+      
+function checkPage(size){
     var pathArray = window.location.pathname.split( '/' );
     if (pathArray[2] == "landing.html"){
-        createLanding();
+        
+        if (size == "web"){
+            webSlide();
+        }else if (size == "mobile"){
+           mobileSlide(); 
+        }
+        
+        
+
     }else if(pathArray[2] == "single_yacht.html"){
         $('#onepage').fullpage({
         
@@ -340,6 +344,9 @@ function homeSlides(){
 
         });
     });
+    setTimeout(function() {
+          
+      }, 5000);
 }
 function activeItem(target){
     var counter = 1;
