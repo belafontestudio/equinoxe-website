@@ -44,7 +44,7 @@ enquire.register("screen and (max-width:480px)", {
 enquire.register("screen and (min-width: 480px)", {
     match : function() {
         console.log("match web");
-        
+
         checkPage("web"); 
     },  
     unmatch : function() {
@@ -65,6 +65,7 @@ function filterMenu(){
             activeLI(target);
             e.preventDefault();
             $("div.filter-opened-section").slideDown();
+            
         });
     });
 }
