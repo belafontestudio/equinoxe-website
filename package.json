@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "auto-reload-brunch": ">= 1.0 < 1.8",
+    "brunch-snockets": "^0.1.5",
     "clean-css-brunch": ">= 1.0 < 1.8",
     "css-brunch": ">= 1.0 < 1.8",
     "handlebars-brunch": ">= 1.0 < 1.8",

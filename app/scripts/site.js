@@ -1,11 +1,12 @@
-var arrayFullPage = ["landing.html","",""];
 
 
+//Resize
 $( window ).resize(function() {
 
   $.modal.resize();
-
-  $.fn.fullpage.reBuild();
+  if($(".fullpage-wrapper")[0]){
+    $.fn.fullpage.reBuild();
+  }
   centerImagesInGrid();
 });
 
@@ -29,7 +30,9 @@ enquire.register("screen and (max-width:480px)", {
     },
     unmatch : function() {
         console.log("unmatch mobile");
-        $.fn.fullpage.destroy('all');
+        if($(".fullpage-wrapper")[0]){
+          $.fn.fullpage.destroy('all');
+        }
     }
       
 });
@@ -40,7 +43,9 @@ enquire.register("screen and (min-width: 480px)", {
     },  
     unmatch : function() {
         console.log("unmatch web");
-        $.fn.fullpage.destroy('all');
+        if($(".fullpage-wrapper")[0]){
+         $.fn.fullpage.destroy('all');
+        }
     }
 });
 
@@ -120,13 +125,39 @@ function rangeSlider(){
     $( "p.max-price" ).text( "€" + $( "#slider-range" ).slider( "values", 1 )+ "k");
 }
 $(document).ready(function() {
+
+    
+
+
     filterMenu();
     rangeSlider();
     guestSlider();
     $( "#slider-single" ).slider({
          min: 0,
          max: 2,
-         step: 1
+         step: 1,
+         slide: function( event, ui ) {
+          switch (ui.value){
+            case 0:
+              $("#filter-yacht").fadeIn(1000);
+              $("#filter-super-yacht").fadeOut(400);
+              $("#filter-mega-yacht").fadeOut(400);
+            break;
+            case 1:
+              $("#filter-yacht").fadeOut(400);
+              $("#filter-super-yacht").fadeIn(1000);
+              $("#filter-mega-yacht").fadeOut(400);
+            break;
+            case 2:
+              $("#filter-yacht").fadeOut(400);
+              $("#filter-super-yacht").fadeOut(400);
+              $("#filter-mega-yacht").fadeIn(1000);
+            break;
+          }
+          
+          
+
+        }
        });
 
     $('#enquire-modal').on($.modal.OPEN, function(event, modal) {
@@ -240,6 +271,103 @@ function webSlide(){
     $("#onepage").load("/pages/slides/yacht_size_web.html",function(data){ 
       homeSlides();
       createLanding();
+      var citymap = {};
+    citymap['chicago'] = {
+      center: new google.maps.LatLng(41.878113, -87.629798),
+      text: new google.maps.LatLng(43.328113, -87.629798),
+      population: 2714856,
+      name: "1"
+    };
+    citymap['newyork'] = {
+      center: new google.maps.LatLng(40.714352, -74.005973),
+      text: new google.maps.LatLng(42.164352, -74.005973),
+      population: 8405837,
+      name: "6"
+    };
+    citymap['losangeles'] = {
+      center: new google.maps.LatLng(34.052234, -118.243684),
+      text: new google.maps.LatLng(35.502234, -118.243684),
+      population: 3857799,
+      name: "3"
+    };
+    citymap['vancouver'] = {
+      center: new google.maps.LatLng(49.25, -123.1),
+      text: new google.maps.LatLng(51, -123.1),
+      population: 603502,
+      name: "13"
+    };
+
+    var cityCircle;
+
+    google.maps.event.addDomListener(window, 'load', init);
+    var map;
+    function init() {
+          var mapOptions = {
+                center: new google.maps.LatLng(40.714352, -74.005973),
+                zoom: 3,
+                zoomControl: false,
+                disableDoubleClickZoom: true,
+                mapTypeControl: false,
+                scaleControl: false,
+                scrollwheel: false,
+                panControl: false,
+                streetViewControl: false,
+                draggable : true,
+                overviewMapControl: false,
+                overviewMapControlOptions: {
+                opened: false,
+          },
+          mapTypeId: google.maps.MapTypeId.SATELLITE,
+    }
+    var mapElement = document.getElementById('charter-map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var locations = [];
+    // Construct the circle for each value in citymap.
+    // Note: We scale the area of the circle based on the population.
+    for (var city in citymap) {
+          var mapLabel = new MapLabel({
+               text: citymap[city].name,
+               position: citymap[city].text,
+               map: map,
+               fontSize:26,
+               fontColor: "#F4BB3B",
+               strokeWeight: 0,
+               fontFamily: "Alegreya Sans",
+               align: 'center'
+             });
+          var populationOptions = {
+                strokeColor: '#F4BB3B',
+                strokeOpacity: 1,
+                strokeWeight: 5,
+                fillColor: '#F4BB3B',
+                fillOpacity: 0,
+                map: map,
+                center: citymap[city].center,
+                radius: Math.sqrt(citymap[city].population) * 500
+          };
+          // Add the circle for this city to the map.
+          cityCircle = new google.maps.Circle(populationOptions);
+    }
+
+    for (i = 0; i < locations.length; i++) {
+          if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+          if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+          if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+          if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+          if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+          marker = new google.maps.Marker({
+                icon: markericon,
+                position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                map: map,
+                title: locations[i][0],
+                desc: description,
+                tel: telephone,
+                email: email,
+                web: web
+          });
+          link = '';     
+          }
+    }
     });
 
 }
