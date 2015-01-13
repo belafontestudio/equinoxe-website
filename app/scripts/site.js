@@ -1,4 +1,4 @@
-
+var slidesInterval;
 
 //Resize
 $( window ).resize(function() {
@@ -380,11 +380,29 @@ function homeSlides(){
             hideStatements(target);
             hideSlides(target);
             activeItem(target);
-
+            clearInterval(slidesInterval);
+        });
+        $(this).mouseleave(function(e){
+            var id = e.target.id;
+            var target = parseInt(id.slice(-1))+1;
+            timerSlidesHome(target);
         });
     });
-    setTimeout(function() {
-          
+    timerSlidesHome();
+}
+function timerSlidesHome(counter){
+    counter = typeof counter !== 'undefined' ? counter : 1;
+    
+    slidesInterval = setInterval(function() {
+        if( counter == $('a.item').length+1){
+            counter = 1;
+        }
+        console.log(counter);
+        hideStatements(counter);
+        hideSlides(counter);
+        activeItem(counter);
+
+        counter++   
       }, 5000);
 }
 function activeItem(target){
