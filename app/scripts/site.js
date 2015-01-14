@@ -18,7 +18,7 @@ imgLoad.on( 'done', function( instance ) {
   centerImagesInGrid();
   var pathArray = window.location.pathname.split( '/' );
   if (pathArray[2] == "single_yacht.html"){
-    $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});  
+    $('.img-holder').imageScroll({coverRatio: 1,extraHeight: 0});  
     }else if (pathArray[2] == "single_expedition.html"){
       $('.img-holder').imageScroll({coverRatio: 0.8,extraHeight: 0});  
     }else{
