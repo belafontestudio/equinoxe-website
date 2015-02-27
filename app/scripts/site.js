@@ -391,7 +391,7 @@ function homeSlides(){
     timerSlidesHome();
 }
 function timerSlidesHome(counter){
-    counter = typeof counter !== 'undefined' ? counter : 1;
+    counter = (typeof counter !== 'undefined' )? counter : 1;
     
     slidesInterval = setInterval(function() {
         if( counter == $('a.item').length+1){
