@@ -15,7 +15,8 @@
     display: block
 #landing-menu
     display: none
-
+section.center-parallax
+    margin-top: 200px
 
 div.filtro
     background-color: black
@@ -57,7 +58,7 @@ div.filter-opened-section
     position relative
 #enquire-modal, #contact-us-modal
     z-index 4 !important
-.hslide, .statement
+.hslide, .statement, .cta
     display none
 .slide
     padding: 0
@@ -111,19 +112,16 @@ div.bottom-spacer
     clear both
     margin 0 0 200px 0
 div#landing-menu 
-     position fixed
-     top 0
-     left 0
-     right 0
      height 60px
      z-index 3
+     
      div.center
          top 20px
     ul#anchor-menu
         margin-left 80px !important
         li
-            margin-right: 35px
-            text-align left !important
+            padding: 0 20px
+        
         a
             outline 0
             font-family "Alegreya Sans", "Helvetica Neue", sans-serif
@@ -613,25 +611,13 @@ section.center, section.center-parallax
         display none
     ul#anchor-menu
         margin-left 0 !important
-    div#landing-menu
-       
-        center(100%, 80px)
-        
-        .center
-            overflow hidden
-            padding 0
-            .scroll
-                
-                width 100%
-            ul
-                display inline-block
+
     section.center, section.center-parallax
         center(100%, 80px) 
         div.logo
             margin-top 100px
 +above(600px)
-    div#landing-menu
-        center(700px, 80px)  
+    
     section.center, section.center-parallax
         center(700px, 80px)
         div.main-text.home
@@ -666,13 +652,7 @@ section.center, section.center-parallax
     p.more-info
         font-size rem(65px) !important
         line-height rem(65px) !important
-    div#landing-menu
-        center(1400px, 0px)
-        ul#anchor-menu
-            column(8/12)
-            shift(2/12)
-            li
-                margin-right: 45px
+    
             
     section.center.latest-grid
         position absolute
