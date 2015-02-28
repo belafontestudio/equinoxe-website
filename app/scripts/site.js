@@ -387,7 +387,7 @@ function centerImagesInGrid(){
 function homeSlides(){
     $('div#hslide1').fadeIn(1000);
     $('p#statement1').fadeIn(1000);
-    $('div.cta').fadeIn(1000);
+    $('div#cta1').fadeIn(1000);
     $('a#m1').addClass("active");
 
     $('li.item').each(function(){
